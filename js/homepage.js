@@ -4,3 +4,4 @@
             header.classList.toggle("sticky", window.scrollY > 0);
 })
 
+/* A function to change the header-nav styling  while scrolling */
