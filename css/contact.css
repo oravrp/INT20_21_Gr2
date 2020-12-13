@@ -137,15 +137,7 @@ li .fa{
     width: 100%; 
     height: 90px; 
     padding-top: 30px;
-    animation: fade 3s;
-}
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    
 }
 section {
     background-color: #dde6ed;
