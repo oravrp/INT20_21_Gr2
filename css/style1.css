@@ -3,25 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    font-family: 'Montserrat',sans-serif;
+}
 /* --------------Header-Nav Styling--------------- */
 
 header {
-    /* background-color: #24252a; */
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 10px 6%;
     transition: 0.8s;
     position: fixed;
-    background-color: #4995A3;
+    /* background-color: #4995A3; */
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
+
+/* Header Sticky Style----while scrolling---*/
+
 header.sticky{
     padding: 0 6%;
-    background-color: #0b4856;
+    background-color: #F5F5F5;
 }
+
+header.sticky{
+    padding: 0 6%;
+    background-color: #F5F5F5;
+}
+
+header.sticky span{
+    color: #5f5353!important;
+}
+
+header.sticky .cta{
+    border: 3px solid #5d5b5b;
+    color: #595c65;
+}
+
+header.sticky .menu{
+    background-color: #75c1ce;
+}
+
+header.sticky .nav__links a{
+    color: #595c65;
+}
+
+header.sticky li .fa{
+    color: black;
+}
+/*-------------------------------------------*/
+
 .logo {
     margin-right: auto;
     text-decoration:none;
@@ -54,24 +86,28 @@ header.sticky{
 }
   
 .nav__links li a:hover {
-    color: #0088a9;
+    color: #3e4142;
 }
   
 .cta {
     margin-left: 20px;
     padding: 9px 25px;
-    /* background-color: rgba(0, 136, 169, 1); */
     border: 3px solid white;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+
 .menu{
     background-color: white;
     color: black;
 }
+
 .cta:hover {
     background-color: rgba(0, 136, 169, 0.8);
+    color: #3e4142;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
 
 /* DropDown Menu */
@@ -103,7 +139,7 @@ header.sticky{
   
 .dropdown-content a {
     float: none;
-    color: black;
+    color: #4995A3;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -120,6 +156,6 @@ header.sticky{
 li .fa{
       color: white;
       padding-left: 6px;
-  }
+}
 
 /* --------------Header-Nav Finish --------------- */
