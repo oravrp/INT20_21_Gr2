@@ -20,7 +20,7 @@ header {
     z-index: 2;
 }
 
-/* Header Sticky Style----while scrolling---*/
+/* Header Sticky Style----while scrolling-----------*/
 
 header.sticky{
     padding: 0 6%;
@@ -159,3 +159,94 @@ li .fa{
 }
 
 /* --------------Header-Nav Finish --------------- */
+
+/* --------------Banner Styling ------------------ */
+.banner{
+    height: 430px;
+    position: relative;
+    background-image: linear-gradient(62deg, #10637b 0%, #4995A3 68%);
+}
+
+.banner .container .hd1{
+  width: 150px;
+  height: 100px;
+}
+
+#img1{
+  margin-left: 647px;
+  margin-top: 118px;
+}
+
+.banner .container .hd2{
+  width: 514px;
+  height: 330px;
+  margin-left: 770px;
+  margin-top: 173px;
+}
+
+.introduction {
+	margin-left: 200px;
+  width: 517px;
+}
+
+.intro-text{
+  position: relative;
+  top: 192px;
+}
+
+.intro-text h1 {
+  font-size: 44px;
+  font-weight: 500;
+  font-family: 'Montserrat',sans-serif;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.intro-text p {
+	margin-top: 5px;
+  font-size: 17px;
+  color: #edf0f1;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.scroll{
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  top: 45px;
+  position: relative;
+  animation: down 1.5s infinite;
+}
+
+.scroll::before{
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 18px;
+  height: 18px;
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+@keyframes down{
+  0%{
+    transform: translate(0);
+  }
+  20%{
+    transform: translateY(15px);
+  }
+  40%{
+    transform: translate(0);
+  }
+}
+
+@media (max-width: 1304px) {
+	.banner .container .hd2 {
+    display: none;
+  }
+} /* a media query to change the display of the image after a specific width */
+
+
