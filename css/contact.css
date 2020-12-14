@@ -188,9 +188,10 @@ section {
 .container .contact-info {
     font-size: 14px;
     font-family: cursive;
-    width: 50%;
     display: flex;
     flex-direction: column;
+    width: 60%;
+    margin-left: 130px;
 }
 .text {
 
@@ -205,24 +206,21 @@ section {
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: 15px;
 }
-.container .contact-info .box .icon {
-
+.icon {
     font-size: 30px;
     background: 2px solid black;
     border-radius: 59%;
     background-color: inherit;
+    padding: 12px;
 
 }
 .container .contact-info .box .text p {
     margin-top: 5px;
     font-size: 15px;
 }
-.container .contact-info {
-    margin-left: 85px;
-    margin-top: 30px;
-}
+
 .contact {
     animation: fadeIn 5s;
 }
@@ -238,7 +236,7 @@ section {
     width: 50%;
     padding: 30px;
     margin-top: 30px;
-    margin-right: 100px;
+    margin-right: 150px;
 }
 .form h2 {
     margin-top: 5px;
