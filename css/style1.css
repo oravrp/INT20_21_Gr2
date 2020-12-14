@@ -230,7 +230,7 @@ li .fa{
   border-left: 2px solid #ffffff;
   transform: rotate(-45deg);
 }
-
+/*keyframe to transform the down arrow in the banner*/
 @keyframes down{
   0%{
     transform: translate(0);
@@ -288,7 +288,7 @@ li .fa{
 }
 #about_sec .portal-text h1:hover{
   -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0,0,0,0.2);
+  text-shadow: 0.5rem 1rem 2rem rgba(0,0,0,0.2);
 }
 #about_sec .portal-text p{
   border: 0px solid #bcc0c3;
@@ -320,3 +320,4 @@ li .fa{
   margin-left: 18px;
   position: absolute;
 }
+/* --------------About-Sec Finish ----------------- */
