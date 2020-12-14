@@ -127,15 +127,16 @@ li .fa{
 }
 .location {
     position: relative;
+    top: 28px;
 }
 .location .location-info h2 {
-    text-align: center; 
-    font-family: cursive; 
-    position: absolute; 
-    top: 68px; 
+    text-align: center;
+    font-family: cursive;
+    position: relative;
+    top: 40px;
     background-color: #dde6ed;
-    width: 100%; 
-    height: 90px; 
+    width: 100%;
+    height: 90px;
     padding-top: 30px;
     
 }
