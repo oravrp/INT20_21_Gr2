@@ -364,13 +364,34 @@ li .fa {
     position: relative;
     background: #f1f1f1f1;
 }
-  
+#bg-color .content-title{
+    padding-bottom: 6px;
+    text-align: center;
+    padding-top: 9px;
+    /* background-color: #2D3B41; */
+    background-image: linear-gradient(62deg, #10637b 0%, #4995A3 68%);
+    margin: 0 auto;
+    color: white;
+}  
 /* Slides */
 .mySlides {
     display: none;
-    padding: 80px;
+    padding: 63px;
     text-align: center;
+    width: 1255px;
+    margin: 0px auto;
 }
+.mySlides h3{
+    line-height: 2;
+    text-transform: none;
+    text-align: center;
+    letter-spacing: normal;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0px;
+    margin-bottom: 27px;
+    color: #fd6b51;
+  }
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
