@@ -2,43 +2,34 @@
 const menu = [{
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
+        header: "Ora Vrapcani",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
+        header: "Loreta Pajaziti",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
+        header: "Lind Krasniqi",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
+        header: "Lum Dukaj",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
+        header: "Florian Halimi",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
+        header: "Flamur Mu$tafa",
     },
-    {
-        img: "/img/StaffPhoto.png",
-        text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
-    },
-    {
-        img: "/img/StaffPhoto.png",
-        text: "Lorem ipsum dolor sit amet.",
-        header: "Emri Mbiemri",
-    },
+
 ];
 
 const gallery = document.querySelector(".gallery");
