@@ -287,3 +287,86 @@ section {
     font-weight: 300;
 
 }
+footer {
+    background-color: #ebeff5;
+    width: 100%;
+    margin-top: 30px;
+}
+.footer {
+    display: flex;
+}
+.footer .mentor {
+    margin-left: 140px;
+   
+}
+.footer .mentor .text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.footer .mentor .text h3 {
+    font-size: 25px;
+    font-family: cursive;
+}
+.footer .mentor .description {
+    margin-top: 50px;
+    
+}
+.footer .mentor .description p {
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+.footer .useful-links {
+    margin-left: 70px;
+}
+.footer .useful-links .text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+.footer .useful-links .text h3 {
+    font-size: 25px;
+    font-family: cursive;
+}
+.footer .useful-links .icon {
+    margin-left: 40px;
+}
+.footer .useful-links .icon i {
+    font-size: 16px;
+    padding-right: 20px;
+}
+.footer .useful-links .icon a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    font-family: sans-serif;
+}
+.footer .social-media {
+    margin-left: 50px;
+}
+.footer .social-media .text {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+.footer .social-media .text h3 {
+     font-size: 25px;
+     font-family: cursive;
+}
+.footer .social-media .social-items {
+    margin-left: 40px;
+    margin-top: 80px;
+    text-align: center;
+}
+.footer .social-media .social-items i {
+    font-size: 30px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.footer .social-media .paragraph p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.footer .social-media .paragraph a {
+    text-decoration: none;
+}
