@@ -452,12 +452,11 @@ li .fa {
     opacity: 0.5;
   }
   /* ------------ Slider-Sec Finish  ----------- */
-  /* features */
+
+  /* ------------ Feature Section    ----------- */
+
 #features{
     min-height: 450px;
-    /* text-align: center;
-    background-image: linear-gradient(62deg, #10637b 0%, #4995A3 68%);
-    padding: 45px; */
     padding: 15px 25px;
 }
 #features .big-box{
@@ -511,5 +510,5 @@ li .fa {
 #features .photo img{
     width: 100px;
 }
-  
+/* ------------ Feature-Sec Finish ----------- */
   
