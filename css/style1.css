@@ -511,4 +511,15 @@ li .fa {
     width: 100px;
 }
 /* ------------ Feature-Sec Finish ----------- */
+/*  Parallax */
+ .parallax 
+ {
+   background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat fixed 100%;
+   opacity: 0.2;
+   margin-top: -80px;      
+ }
+ .parallax-inner
+ {
+     padding-top: 10%;
+ }
   
