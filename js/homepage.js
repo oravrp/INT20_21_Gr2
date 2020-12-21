@@ -1,9 +1,5 @@
 
- function navActive(e)
- {
-     document.getElementById(e).id = "active";
- }
- /* A function to change the header-nav styling  while scrolling */
+/* A function to change the header-nav styling  while scrolling */
  window.addEventListener("scroll", function () {
              var header = document.querySelector("header");
             header.classList.toggle("sticky", window.scrollY > 0);
