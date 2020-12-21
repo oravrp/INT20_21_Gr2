@@ -267,6 +267,10 @@ section {
     resize: none;
     font-size: 16px;
 }
+.form .input input:focus,
+.form .input textarea:focus {
+    border-bottom: 3px solid blue;
+}
 .form .input span {
     position: absolute;
     left: 0;
@@ -276,16 +280,21 @@ section {
 .form .input input[type = "submit"]
 {
     width: 100px;
-    background-color: #e85454;
-    border: none;
+    background-color: none;
+    border: 2px solid black;
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 260px;
+    margin-left: 240px;
     height: 40px;
     font-size: 18px;
     font-family: cursive;
     font-weight: 300;
-
+    transition: all 0.8s ease;
+}
+.form .input input[type = "submit"]:hover {
+    background-color: #e85454;
+    width: 130px;
+    border-radius: 5px;
 }
 footer {
     background-color: #ebeff5;
