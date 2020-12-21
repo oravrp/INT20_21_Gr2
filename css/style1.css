@@ -8,7 +8,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+#active
+{
+    border-bottom: 2px solid #E2CBA0;
+    border-top: 2px solid #E2CBA0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
+    box-shadow: 0px 0px 5px #E2CBA0;
+}
 /* --------------Header-Nav Styling--------------- */
 
 header {
@@ -511,4 +521,58 @@ li .fa {
     width: 100px;
 }
 /* ------------ Feature-Sec Finish ----------- */
+/*  Parallax */
+ .parallax 
+ {
+   background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat fixed 100%;
+   opacity: 0.2;
+   margin-top: -80px;      
+ }
+ .parallax-inner
+ {
+     padding-top: 10%;
+ }
+
+ /*------------------ Footer ------------------*/
+.footer {
+    padding: 60px 0 20px;
+    background: #2D3B41;
+    color: #f7dada;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+  }
+  .footer a {
+    color: #fff;
+  }
+  
+  .footer h3{
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin: 0 0 40px;
+  font-size: 24px;
+  }
+  
+  .footer .social-links li a {
+    color: #fff;
+    font-size: 32px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }
+  .footer .social-links li {
+    display: inline-block;
+    margin: 0 25px 25px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }
+  .footer .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 40px;
+    padding: 40px 0 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
   
