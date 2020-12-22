@@ -271,12 +271,32 @@ section {
 .form .input textarea:focus {
     border-bottom: 3px solid blue;
 }
+.form .input label {
+    position: absolute;
+    left: 0;
+    bottom: 33px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.form .input input:focus ~ label,
+.form .input input:valid ~ label {
+    transform: translateY(-25px);
+    color: blue;
+}
 .form .input span {
     position: absolute;
     left: 0;
-
+    bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.9s ease;
 }
-
+.form .input textarea:focus ~ span,
+.form .input textarea:valid ~ span {
+    transform: translateY(-25px) rotate(360deg);
+    color: blue;
+}
 .form .input input[type = "submit"]
 {
     width: 100px;
@@ -295,6 +315,23 @@ section {
     background-color: #e85454;
     width: 130px;
     border-radius: 5px;
+}
+.form .input1 .input label {
+    position: absolute;
+    left: 0px;
+    bottom: 15px;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+.form .input1 .input input:focus ~ label,
+.form .input1 .input input:valid ~ label {
+    transform: translateY(-20px);
+    color: blue;
+}.form .input1 #id1 label {
+    position: absolute;
+    left: 30px;
+    bottom: 15px;
 }
 footer {
     background-color: #ebeff5;
