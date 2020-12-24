@@ -246,17 +246,23 @@ section {
 }
 .form .input {
     position: relative;
-    margin-top: 10px;
+    margin-top: 30px;
 }
-
 .form .input1 {
     display: flex;
-
+}
+.form .input1 .input #nameErr {
+    position: absolute;
+    left: 0px;
+    bottom: -10px;
+    font-size: 16px;
+    color: red;
+    visibility: hidden;
 }
 .form .input input,
 .form .input textarea
 {
-    margin: 10px 0px;
+    margin: 5px 0px;
     width: 300px;
     border: none;
     border-bottom: 2px solid black;
@@ -274,7 +280,7 @@ section {
 .form .input label {
     position: absolute;
     left: 0;
-    bottom: 33px;
+    bottom: 40px;
     font-size: 18px;
     font-weight: bold;
     transition: all 0.5s ease;
@@ -319,7 +325,7 @@ section {
 .form .input1 .input label {
     position: absolute;
     left: 0px;
-    bottom: 15px;
+    bottom: 30px;
     font-size: 18px;
     transition: all 0.5s ease;
     font-weight: bold;
@@ -331,7 +337,30 @@ section {
 }.form .input1 #id1 label {
     position: absolute;
     left: 30px;
-    bottom: 15px;
+    bottom: 30px;
+}
+.form .input1 #id1 #lastNameErr {
+    position: absolute;
+    left: 30px;
+    bottom: -10px;
+    font-size: 16px;
+    color: red;
+    visibility: hidden;
+
+}
+.form .input #subjErr {
+    position: absolute;
+    left: 0px;
+    color: red;
+    font-size: 16px;
+    visibility: hidden;
+}
+.form .input #MessErr {
+    position: absolute;
+    left: 0px;
+    font-size: 18px;
+    color: red;
+    visibility: hidden;
 }
 footer {
     background-color: #ebeff5;
