@@ -432,15 +432,6 @@ li .fa {
 .slideshow-container {
     position: relative;
     background: #f1f1f1f1;
-}
-#bg-color .content-title{
-    padding-bottom: 6px;
-    text-align: center;
-    padding-top: 9px;
-    /* background-color: #2D3B41; */
-    background-image: linear-gradient(62deg, #10637b 0%, #4995A3 68%);
-    margin: 0 auto;
-    color: white;
 }  
 /* Slides */
 .mySlides {
@@ -459,7 +450,7 @@ li .fa {
     font-style: normal;
     padding: 0px;
     margin-bottom: 27px;
-    color: #fd6b51;
+    color: #1c1c22;
   }
 /* Next & previous buttons */
 .prev, .next {
@@ -539,18 +530,30 @@ li .fa {
     margin-left: 226px;
      /* background-image: url(/wp-content/uploads/2019/08/Pattern2_1Pattern2.png),linear-gradient(130deg, #e9996d, #f35f5f); */
 }
+.big-box:hover{
+    outline: #F35F55 dashed 3px;
+}
 #features .small-box{
     width: 200px;
     display: inline-block;
     text-align: center;
     margin-right: 35px;
-    background: #fff;
     padding: 40px 30px;
     border: 1px solid #eef0ef;
     vertical-align: top;
     box shape-outside: content-box;
     box-shadow: 5px 10px 18px #c5a19a54; 
+    height: 355px;
     /*#e54b4b3d  -shadow ose #409fbb54; */
+}
+#bg1{
+    background: linear-gradient(60deg,rgba(230,242,255,.7) 0,rgba(230,242,255,.7) 35%,rgba(242,242,251,.7) 100%);
+}
+#bg2{
+    background: linear-gradient(60deg,rgba(235,241,255,.7) 0,rgba(244,241,250,.7) 35%,rgba(252,239,246,.7) 100%);
+}
+#bg3{
+    background: linear-gradient(60deg,rgba(243,239,253,.7) 0,rgba(253,238,245,.7) 35%,rgba(255,234,239,.7) 100%);
 }
 #features .small-box:hover{
     transform: translateY(-1.5rem) scale(1.03);
@@ -563,9 +566,9 @@ li .fa {
     color: #6d6b68;
 }
 #features .ikona img{
-    width: 130px;
-    height: 94px;
-    margin-bottom: 37px;
+    width: 128px;
+    height: 90px;
+    margin-bottom: 20px;
 }
 #features .big-box h1{
     font-weight: 700;
@@ -583,7 +586,7 @@ li .fa {
 /*  Parallax */
  .parallax 
  {
-   background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat fixed 100%;
+   background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat 100%;
    opacity: 0.2;
    margin-top: -80px;      
  }
