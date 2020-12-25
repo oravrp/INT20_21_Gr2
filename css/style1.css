@@ -595,6 +595,157 @@ li .fa {
      padding-top: 10%;
  }
 
+ /*---------------------news ------------------*/
+#news{
+    min-height: 590px;
+    width: 100%;
+    background: #E1EAED;
+    padding: 60px;
+    margin-top: 50px;
+    clip-path: polygon(0% 0%, 80% 0%, 100% 0%, 100% 80%, 50% 100%, 50% 100%, 0% 80%, 0% 20%);
+  }
+  #news .content{
+    width: 1277px;
+    margin: 0 auto;
+    padding-left: 28px;
+  }
+  #news .content h1{
+    border-bottom: 1px solid #d2d2d2;
+    margin-bottom: 39px;
+    padding-bottom: 29px;
+    color: #2D3B41;
+  }
+  #news .news {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 18px;
+    position: relative;
+  }
+  #news .news img{
+    width: 290px;
+    height: 185px;
+    border-radius: 0.4375rem;
+    opacity: 0.9;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  #news .content .news p{
+    margin-top: 15px;
+    color: #a2a2a2;
+    width: 290px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  #news .content .news p:last-child{
+    color: #2D3B41!important;
+  }
+  #news .cta2{
+    position: relative;
+    left: 45%;
+    top: 88px;
+    color: #14293c;
+    border: 3px solid #14293c;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 185px;
+    width: 290px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #2D3B41;
+  }
+  
+  .news:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  #news .news .overlay .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  #news .news .overlay .text a{
+    text-decoration: none;
+    color: white;
+  }
+/*-----------------news finish ----------------*/
+
+/* Back to top button*/
+
+#button {
+    display: inline-block;
+    background-color:#2a2931 ;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 309px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /*-----------------------------------------*/
+  #sponsor{
+    min-height: 200px;
+    padding: 50px 50px 0 50px;
+    margin-top: 70px;
+  }
+  #sponsor h1{
+    text-align: center;
+    margin-bottom: 53px;
+    font-size: 20px;
+    border-bottom-width: 29px solid black;
+    color: #535b5f;
+    font-weight: 200;
+  }
+  
+  #sponsor img{
+    width: 100px;
+    height: 120px;
+    margin-right: 120px;
+    opacity: 0.8;
+    transition: all 300ms linear 0s;
+  
+  }
+  #sponsor img:hover{
+    /* filter: drop-shadow(16px 16px 20px red) invert(75%); */
+    filter: drop-shadow(16px 16px 1px #f35f5f);
+    transition: all 300ms linear 0s;
+  }
+  #sponsor #para{
+    margin-left: 119px;
+  }
  /*------------------ Footer ------------------*/
 .footer {
     padding: 60px 0 20px;
