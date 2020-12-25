@@ -13,6 +13,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        //jquery code for the top button
+        $(document).ready(function () {
+            var btn = $('#button');
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 1700) {
+                    btn.addClass('show');
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+
+        });
+    </script>
 </head>
 
 <body>
@@ -83,7 +104,13 @@
     <!-- Section about web portal-->
     <section id="about_sec">
         <div class="portal-img" id="about">
-            <img src="img/about1.png" id="foto">
+            <img src="img/about1.png" id="foto" alt="Web Portal">
+            <!--Image when clicked-->
+            <div id="show" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="photo">
+                <div id="figcaption"></div>
+            </div>
         </div>
         <div class="portal-text">
             <h1>Software.<span class="about-title"> Air Portal</span></h1>
