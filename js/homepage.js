@@ -5,6 +5,26 @@
             header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+/* Javascript Code for the about-section to show image on zoom */
+
+var modal = document.getElementById('show');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('foto');
+var Img = document.getElementById("photo");
+var capText = document.getElementById("figcaption");
+img.onclick = function(){
+  modal.style.display = "block";
+  Img.src = this.src;
+  capText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
 /* Javascript code for the slider in the bg-color section*/
 var slideIndex = 1;
 showSlides(slideIndex);
