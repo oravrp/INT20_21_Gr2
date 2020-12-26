@@ -1,0 +1,86 @@
+/*CSS file for the about page */
+
+/* Table of contents
+    1. Concepts
+    2. Objectives
+    3. Partners
+*/
+
+/* 1. CONCEPTS  */
+.concepts {
+    position: relative;
+    top: 50px;
+}
+
+.concepts .concepts-info h2 {
+    font-family: 'poppins';
+    color:rgb(3, 52, 85);
+    text-align: center;
+    position: relative;
+    top: 40px;
+    background-color: #dde6ed00;
+    width: 100%;
+    height: 90px;
+    padding-top: 30px;
+    
+}
+
+.concepts .concepts-description h3 {
+    text-align: center;
+    color: #8c9597;
+    font-size:16px;
+    font-family: "lato";
+    position: relative;
+    top: 20px;
+    background-color: #dde6ed00;
+    width: 100%;
+    height: 90px;
+    padding-top: 10px;
+    
+}
+
+.concepts .first_concept h3, .concepts .second_concept h3, .concepts .third_concept h3  {
+    text-align: center;
+    color: #8c9597;
+    font-family: "lato";
+    font-size:16px;
+    position: relative;
+    top: 20px;
+    background-color: #dde6ed00;
+    width: 100%;
+    height: 90px;
+    padding-top: 10px;
+    
+}
+
+.concepts .first_concept h2, .concepts .second_concept h2, .concepts .third_concept h2{
+    font-family: 'poppins';
+    color:rgb(3, 52, 85);
+    text-align: center;
+    position: relative;
+    top: 40px;
+    background-color: #dde6ed00;
+    width: 100%;
+    height: 90px;
+    padding-top: 30px;
+    
+}
+
+.column{
+     background-color: #8bc5f100;
+    float:left;
+     text-align: center;
+     padding: 0 5px;
+     width:33.3%;
+     height:200px;
+     position:relative;
+
+}
+
+
+/*.concept .first_concept .column i{
+    position:absolute;
+    bottom: 0px;
+}
+
+*/
