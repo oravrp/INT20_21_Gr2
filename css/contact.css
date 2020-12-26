@@ -342,7 +342,7 @@ section {
 .form .input1 #id1 #lastNameErr {
     position: absolute;
     left: 30px;
-    bottom: -10px;
+    bottom: -14px;
     font-size: 16px;
     color: red;
     visibility: hidden;
