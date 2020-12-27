@@ -362,6 +362,11 @@ section {
     color: red;
     visibility: hidden;
 }
+.form #radioErr {
+    color: red;
+    font-size: 16px;
+    visibility: hidden;
+}
 footer {
     background-color: #ebeff5;
     width: 100%;
@@ -450,4 +455,16 @@ footer {
 }
 .footer .social-media .paragraph a {
     text-decoration: none;
+}
+
+@keyframes anim1 {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to 
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }

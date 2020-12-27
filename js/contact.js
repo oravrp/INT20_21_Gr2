@@ -1,15 +1,19 @@
     
+	// ---------- Validating form --------------- 
 
     var emri = document.getElementById('name');
   	var mbiemri = document.getElementById('lastName');
   	var Subject = document.getElementById('Subject');
-  	var txtArea = document.getElementById('textarea');
+	var txtArea = document.getElementById('textarea');
+	var radio = document.getElementById('radio');
+	  
   	var form = document.getElementById('form');
 
   	var emriErr = document.getElementById('nameErr');
   	var mbiemriErr = document.getElementById('lastNameErr');
   	var subjErr = document.getElementById('subjErr');
-  	var MessErr = document.getElementById('MessErr');
+	var MessErr = document.getElementById('MessErr');
+	var radioErr = document .getElementById('radioErr');
 
   	form.addEventListener('submit', (e) =>{
   		let messages = []
@@ -60,13 +64,32 @@
   			MessErr.style.visibility = "visible";
   			messages.push("This field is required");
 
-  		}
-  		if(messages.length > 0 ){
-  		e.preventDefault();
-		 }
-		 if (messages.length == 0 ) {
+		  }
+		  if (radio.checked == false) {
+		   radioErr.style.visibility = "visible";
+		   messages.push("You nedd to agree to our terms");
+		  }
+		  else {
+			radioErr.style.visibility="hidden";
+		  }
+  		  if(messages.length > 0 ){
+  		  e.preventDefault();
+		  }
+		  if (messages.length == 0 ) {
 			 alert("Thank you for your message, we try to be better every day !");
-		 } 
-		
+		  } 
+	  })
 
-  	})
+	  //-------------Revealing Div with class container on scroll---------------
+
+	  const container = document.querySelector('.container');
+	  observer = new IntersectionObserver ((entries)=> {
+      console.log(entries);
+      if (entries[0].intersectionRatio > 0) {
+        entries[0].target.style.animation = 'anim1 2s forwards ease-out';
+      }
+      else {
+        entries[0].target.style.animation = "none";
+     }
+     })
+     observer.observe(container);
