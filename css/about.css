@@ -14,10 +14,12 @@
 .banner .container .ban_photo {
     
     height: 330px;
-    margin-left: 900px;
+    margin-left: 650px;
     margin-top:30px;
- 
+    position:absolute;
+    right:0;
 }
+
 
 /* ---------- 2. CONCEPTS ----------  */
 
@@ -157,7 +159,7 @@ transform:translateY(-5px);
     height:100%;
     width: 50%;
     position:absolute;
-margin-top:450px;
+    margin-top:450px;
   }
 
   .left {
@@ -202,3 +204,6 @@ margin-top:450px;
   .centered img {
     width: 100%;
   }
+
+
+  
