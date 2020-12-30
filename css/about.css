@@ -158,7 +158,6 @@ transform:translateY(-5px);
 /* ---------- 3. OBJECTIVES ---------- */
 
 
-
 .objectives{
   margin-top: 100px;
   display: flex;
@@ -292,4 +291,88 @@ transform:translateY(-5px);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     }
 
+
+
+ /* ---------- 5. PARTNERS ---------- */
+ 
+ .partners{
+  display: flex;
+}
+
+.right-split{
+    height:100%;
+    width: 50%;
+    background-color: rgb(194, 222, 235);
     
+   
+  }
+
+  .left-split{
+    height:100%;
+    width: 50%;
+   
+  }
+  
+  #text-one{
+    color: #8c9597;
+    margin-left: 145px;
+    text-align: left;
+    margin-top: 100px;
+    font-weight:bold;
+  }
+
+  #text-two{
+    color: black;
+    margin-left: 145px;
+    text-align: left;
+    font-weight:bold;
+  }
+
+
+  .first_partner, .second_partner, .third_partner, .fourth_partner{
+      margin-top:50px;
+      font-family: 'poppins';
+      width: 100%;
+      
+      
+  }
+
+   #country{
+        color:#8c9597;
+        top:10%;
+        left:15%;
+        position:relative;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    #university{
+      top:10%;
+      left:15%;
+      position:relative;
+      font-weight:bold;
+      color:black;
+    }
+
+  .first_partner p, .second_partner p, .third_partner p, .fourth_partner p{
+      margin-top:10px;
+      max-width:50%;
+      top:10%;
+      left:15%;
+      position:relative;
+      
+  }
+
+    #last_para{
+      padding-bottom:100px;
+    }
+
+  .date{
+      color:rgb(146, 37, 23);
+  }
+
+  .map{
+    text-align: center;
+    position:relative;
+    top:200px;
+  }
