@@ -2,7 +2,7 @@
 	// ---------- Validating form --------------- 
 
     var emri = document.getElementById('name');
-  	var mbiemri = document.getElementById('lastName');
+  	var mail = document.getElementById('email');
   	var Subject = document.getElementById('Subject');
 	var txtArea = document.getElementById('textarea');
 	var radio = document.getElementById('radio');
@@ -10,14 +10,14 @@
   	var form = document.getElementById('form');
 
   	var emriErr = document.getElementById('nameErr');
-  	var mbiemriErr = document.getElementById('lastNameErr');
+  	var mailErr = document.getElementById('mailErr');
   	var subjErr = document.getElementById('subjErr');
 	var MessErr = document.getElementById('MessErr');
 	var radioErr = document .getElementById('radioErr');
 
   	form.addEventListener('submit', (e) =>{
   		let messages = []
-  		if (emri.value === '' || emri == null){
+  		if (emri.value === '' || emri.value == null){
   			emriErr.style.visibility = "visible";
   			messages.push("This field is required");
 		}
@@ -30,17 +30,17 @@
               emriErr.style.visibility = "visible";
               messages.push("This field is required");
           }
-  		if (mbiemri.value === '' || mbiemri.value == null) {
-  			mbiemriErr.style.visibility = "visible";
+  		if (mail.value === '' || mail.value == null) {
+  			mailErr.style.visibility = "visible";
   			messages.push("This filed is required");
 		}
-		else if (mbiemri.value.length > 0 && isNaN(mbiemri.value)) {
-			mbiemriErr.style.visibility = "hidden";
+		else if (mail.value.length > 0 ) {
+			mailErr.style.visibility = "hidden";
 		}  
-  		 else if (!isNaN(mbiemri.value)) {
-              lastNameErr.innerText = "You can not put numbers in this field";
-              lastNameErr.style.color = "red";
-              lastNameErr.style.visibility = "visible";
+  		 else if (!ValidateEmail(mail.value)) {
+              mailErr.innerText = "This email is invalid";
+              mailErr.style.color = "red";
+              mailErr.style.visibility = "visible";
               messages.push("This field is required");
           }
   		if (Subject.value === '' || Subject.value == null) {
@@ -65,13 +65,7 @@
   			messages.push("This field is required");
 
 		  }
-		  if (radio.checked == false) {
-		   radioErr.style.visibility = "visible";
-		   messages.push("You nedd to agree to our terms");
-		  }
-		  else {
-			radioErr.style.visibility="hidden";
-		  }
+
   		  if(messages.length > 0 ){
   		  e.preventDefault();
 		  }
@@ -96,9 +90,9 @@
 	 
 	 //---------------Geo Location --------------------------------------
 	 var map, infoWindow;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
+		function initMap() {
+ 	 map = new google.maps.Map(document.getElementById('map'), {
+ 	   center: {lat: -34.397, lng: 150.644},
     zoom: 6
   });
   infoWindow = new google.maps.InfoWindow;
@@ -130,4 +124,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: The Geolocation service failed.' :
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
+}
+function ValidateEmail(mail) 
+{
+ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
 }

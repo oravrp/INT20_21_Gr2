@@ -120,7 +120,7 @@ li .fa{
       color: white;
       padding-left: 6px;
   }
-.container .contact-info {
+  .container .contact-info {
     margin-left: 85px;
     margin-top: 30px;
 }
@@ -138,29 +138,28 @@ li .fa{
     padding: 2rem;
     color: rgba(0, 0, 0, 0.5);
 }
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+
 section {
-    background-color: #dde6ed;
+    background-color: #f4f4f47a;
 }
 .contact {
     position: relative;
     min-height: 200px;
     padding: 20px;
     display: flex;
+    top: 60px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.contact .content {
+.contact  h4{
+    font-size: 25px;
+    font-family: poppins;
+    color: #4995A3;
+    margin-top: 20px;
+}
+/*.contact .content {
     color: black;
-    font-family: cursive;
     font-weight: 300px;
     font-size: 16px;
 }
@@ -174,24 +173,25 @@ section {
     padding-top: 10px;
     font-size: 20px;
 }
+*/
 .container {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 .container .contact-info {
     font-size: 14px;
-    font-family: cursive;
     display: flex;
+    margin-bottom: 111px;
     flex-direction: column;
     width: 60%;
-    margin-left: 130px;
+    margin-left: 187px;
+    margin-top: 80px;
 }
 .text {
-
     float: left;
 }
 .container .contact-info .box {
@@ -204,47 +204,42 @@ section {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
+    margin-bottom: 10px;
+    color: #0088a9;
 }
-.icon {
-    font-size: 30px;
-    background: 2px solid black;
-    border-radius: 59%;
-    background-color: inherit;
-    padding: 12px;
-
+.container .contact-info .box .icon {
+    font-size: 20px;
+    color: #4995A3;
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: #ecf9f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.container .contact-info .box .icon:hover{
+    background: #4995A3;
+    color: #fff
 }
 .container .contact-info .box .text p {
-    margin-top: 5px;
     font-size: 15px;
+    color: #546871;
 }
 
-.contact {
-    animation: fadeIn 5s;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+
 .form {
     width: 50%;
     padding: 30px;
     margin-top: 30px;
     margin-right: 150px;
 }
-.form h2 {
-    margin-top: 5px;
-    text-align: center;
-    font-family: cursive;
-    font-weight: 300px;
-    padding: 20px 0px;
-}
+
 .form .input {
     position: relative;
-    margin-top: 30px;
+    padding-bottom: 8px;
 }
 .form .input1 {
     display: flex;
@@ -252,7 +247,7 @@ section {
 .form .input1 .input #nameErr {
     position: absolute;
     left: 0px;
-    bottom: -10px;
+    bottom: -5px;
     font-size: 16px;
     color: red;
     visibility: hidden;
@@ -260,21 +255,32 @@ section {
 .form .input input,
 .form .input textarea
 {
-    margin: 5px 0px;
-    width: 300px;
-    border: none;
-    border-bottom: 2px solid black;
+    margin: 5px 0;
+    width: 310.5px;
+    color: rgb(73, 80, 87);
+    border: 2px solid #e0dede;
     outline: none;
-    padding: 5px 0px;
+    padding: 0.385rem 0.75rem;
     background-color: inherit;
-    resize: none;
+    height: 44px;
     font-size: 16px;
+    border-radius: 4px;
     
+}
+#textarea{
+    width: 635px;
+    margin-top: 20px;
+    height: 148px;
+    resize: vertical;
+    padding-top: 17px;
+    font: 100 16.3333px Arial;
 }
 .form .input input:focus,
 .form .input textarea:focus {
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid #4995A3;
+    background-color: #f0efed;
 }
+
 .form .input label {
     position: absolute;
     left: 0;
@@ -303,15 +309,16 @@ section {
 }
 .form .input input[type = "submit"]
 {
-    width: 100px;
+    width: 135px;
     background-color: none;
-    border: 2px solid black;
+    border: 2px solid #4995A3;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
+    background-color: #4995A3;
     margin-left: 240px;
     height: 40px;
+    color: white;
     font-size: 18px;
-    font-family: cursive;
     font-weight: 300;
     transition: all 0.8s ease;
 }
@@ -337,10 +344,10 @@ section {
     left: 30px;
     bottom: 30px;
 }
-.form .input1 #id1 #lastNameErr {
+.form .input1 #id1 #mailErr {
     position: absolute;
     left: 30px;
-    bottom: -14px;
+    bottom: -5px;
     font-size: 16px;
     color: red;
     visibility: hidden;
@@ -365,6 +372,8 @@ section {
     font-size: 16px;
     visibility: hidden;
 }
+
+
 footer {
     background-color: #ebeff5;
     width: 100%;
@@ -397,6 +406,7 @@ footer {
 }
 .footer .useful-links {
     margin-left: 70px;
+    margin-bottom: 10px;
 }
 .footer .useful-links .text {
     margin-top: 20px;
@@ -409,10 +419,12 @@ footer {
 }
 .footer .useful-links .icon {
     margin-left: 40px;
+    margin-bottom: 10px;
 }
 .footer .useful-links .icon i {
     font-size: 16px;
     padding-right: 20px;
+    margin-bottom: 20px;
 }
 .footer .useful-links .icon a {
     font-size: 16px;
