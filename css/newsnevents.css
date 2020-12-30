@@ -53,6 +53,7 @@ p {
     grid-gap: 2rem;
     width: 80%;
     margin: auto;
+    
 }
 
 #left-bar {
@@ -74,3 +75,39 @@ p {
 #box-4 {
     grid-area: box-4;
 }
+
+.title{
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.p3{
+    margin-top:100px;
+}
+.heading{
+    font-size: 22px;
+    line-height: normal;
+    font-weight: normal;
+    text-transform: capitalize;
+   
+}
+h6{
+    margin-bottom:0px;
+}
+.title p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+
+}
+#info2{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2rem;
+    width: 80%;
+    margin: auto;
+}
+
