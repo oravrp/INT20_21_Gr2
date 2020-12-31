@@ -11,11 +11,50 @@
 
 /*---------- 1. BANNER ---------- */
 
+
+
+
+.about_banner h2{
+  text-align: center;
+  color: rgb(73, 73, 73);
+  font-size: 50px;
+  font-family:poppins;
+  border: 5px solid rgb(73, 73, 73);;
+  padding: 5px 5px 5px 5px;
+  margin-left:450px;
+  margin-right:450px;
+  position: relative;
+  top: 300px;
+}
+
+.about_banner h2:hover{
+  color:rgb(150, 150, 150);
+  border-color:rgb(150, 150, 150);
+}
+
+
+
+/*
 .banner .container .hd2 {
   width: 550px;
   height: 330px;
   margin-left: 740px;
   margin-top: 50px;
+}
+*/
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 6%;
+  transition: 0.8s;
+  position: fixed;
+  left: 0;
+  background-color: #4995A3;
+  width: 100%;
+  z-index: 2;
+  top:0;
 }
 
 /* ---------- 2. CONCEPTS ----------  */
@@ -37,7 +76,7 @@
     padding-top: 30px;
     font-size: 50px;
     margin-bottom: 20px;
-    margin-top: -200px;
+    margin-top:150px;
     
 }
 
@@ -374,5 +413,13 @@ transform:translateY(-5px);
   .map{
     text-align: center;
     position:relative;
-    top:200px;
+    top:100px;
   }
+
+  .map p{
+    padding-bottom:50px;
+    font-family: 'poppins';
+    font-weight:bold;
+  }
+
+  

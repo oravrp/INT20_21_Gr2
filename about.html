@@ -45,42 +45,30 @@
                         </div>
                     </li>
                 </div>
-                <li><a href="#">News & Events</a></li>
+                <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
         <a class="cta" href="contact.html">Contact</a>
         <p class="menu cta">Home</p>
     </header> 
 
-    <!--Banner-->
-    <div class="banner">
-        <div class="container">
-            <div class="introduction">
-                <div class="intro-text">
-                    <h1>About us</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elitr
-                    </p>
-                    
-                </div>
-            </div>
-            <img src="img/about_banner.png" class="hd2" alt="banner image" >
-        </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <defs>
-            <linearGradient id="Gradient1">
-                <stop stop-color="#10637b" offset="0%"></stop>
-                <stop stop-color="#4995A3" offset="75%"></stop>
-            </linearGradient>
-        </defs>
-        <path fill="url(#Gradient1)"
-            d="M0,160L120,149.3C240,139,480,117,720,112C960,107,1200,117,1320,122.7L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
-        </path>
-    </svg>
-    <!--/Banner-->
+    
+
+
+<!-- Banner -->
+
+<div class = "about_banner" style=" max-width: 7000px; height:800px; background-image: url('img/windmill.jpg');
+ background-position: 0%; ">
+
+   
+    
+    <h2>ABOUT US</h2>
+
+</div>
+
+
+
+
 
      <!-- Concepts-->
 
@@ -213,7 +201,20 @@
 
     <div class = "left-split">
         <div class = "map">
-            <img src="img/eu_map.png" alt="Europe Map" style=" height: 600px; width:600px; ">
+            <p>Click the University logos!</p>
+            <img src="img/eu_map.png" alt="Europe Map" style=" height: 600px; width:600px;" usemap="#workmap">
+            <map name="workmap">
+                <area shape="rect" coords="55,200,200,250" alt="Tyndall" href="https://www.tyndall.ie/" onclick="myFunction()">
+                <area shape="rect" coords="420,35,530,135" alt="Linneuniversitetet" href="https://lnu.se/" onclick="myFunction()">
+                <area shape="rect" coords="310,215,435,260" alt="Duisburg" href="https://www.uni-due.de/en/" onclick="myFunction()">
+                <area shape="rect" coords="290,360,365,430" alt="TU Wien" href="https://www.tuwien.at/" onclick="myFunction()">
+                <area shape="circle" coords="325,530,35" alt="UP" href="https://www.uni-pr.edu/" onclick="myFunction()">
+              </map>
+              <script>
+                function myFunction() {
+                  alert("You clicked the University Logo. It will take you to the Official Webpage of the University!");
+                }
+                </script>
         </div>
     </div>
     
