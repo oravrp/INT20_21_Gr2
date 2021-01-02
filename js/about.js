@@ -1,27 +1,34 @@
-var slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// Slider
+var divElements = document.getElementsByClassName('slider-content');
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+var index = 0;
 
-var slideIndex = 0;
-showSlides();
+document.getElementById('next').addEventListener('click', function(event) {
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+    divElements[index].classList.remove('active')
+    divElements[index].classList.add('not-active')
+
+    index++;
+    if (index == divElements.length) index = 0;
+
+    divElements[index].classList.add('active')
+    divElements[index].classList.remove('not-active')
+
+})
+
+document.getElementById('prev').addEventListener('click', function(event) {
+
+    divElements[index].classList.remove('active');
+    divElements[index].classList.add('not-active');
+
+    index--;
+    if (index == -1) index = divElements.length - 1;
+
+    divElements[index].classList.add('active');
+    divElements[index].classList.remove('not-active');
+})
+
+// Slider-end
+
+

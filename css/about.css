@@ -11,38 +11,6 @@
 
 /*---------- 1. BANNER ---------- */
 
-
-
-
-.about_banner h2{
-  text-align: center;
-  color: rgb(73, 73, 73);
-  font-size: 50px;
-  font-family:poppins;
-  border: 5px solid rgb(73, 73, 73);;
-  padding: 5px 5px 5px 5px;
-  margin-left:450px;
-  margin-right:450px;
-  position: relative;
-  top: 300px;
-}
-
-.about_banner h2:hover{
-  color:rgb(150, 150, 150);
-  border-color:rgb(150, 150, 150);
-}
-
-
-
-/*
-.banner .container .hd2 {
-  width: 550px;
-  height: 330px;
-  margin-left: 740px;
-  margin-top: 50px;
-}
-*/
-
 header {
   display: flex;
   justify-content: flex-end;
@@ -56,6 +24,113 @@ header {
   z-index: 2;
   top:0;
 }
+
+/* Slider */
+
+.content-holder {
+  height: 100vh;
+}
+
+.slider-content{
+ width: 100%;
+ 
+}
+
+.active,
+.not-active {
+  z-index: -1;
+  top: 45%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+
+.not-active {
+  opacity: 0;
+}
+
+#prev,
+#next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev:hover,
+#next:hover {
+  background-color:rgb(73, 73, 73);
+}
+
+#first-slide{
+  text-align: center;
+  color: rgb(73, 73, 73);
+  font-size: 50px;
+  font-family:poppins;
+  border: 5px solid rgb(73, 73, 73);
+  padding: 5px;
+  margin-left:450px;
+  margin-right:450px;
+  position: relative;
+  top: 300px;
+  
+}
+
+#first-slide:hover{
+  color:rgb(150, 150, 150);
+  border-color:rgb(150, 150, 150);
+}
+
+
+#second-slide{
+  text-align: center;
+  color: whitesmoke;
+  font-size: 50px;
+  font-family:poppins;
+  border: 5px solid whitesmoke;
+  padding: 5px 5px 5px 5px;
+  margin-left:450px;
+  margin-right:450px;
+  position: relative;
+  top: 300px;
+}
+
+
+#third-slide{
+  text-align: center;
+  color: rgb(73, 73, 73);
+  font-size: 50px;
+  font-family:poppins;
+  border: 5px solid rgb(73, 73, 73);
+  padding: 5px 5px 5px 5px;
+  margin-left:450px;
+  margin-right:450px;
+  position: relative;
+  top: 280px;
+}
+
+
+
+/* Slider-end */
+
 
 /* ---------- 2. CONCEPTS ----------  */
 
