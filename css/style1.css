@@ -521,6 +521,7 @@ li .fa {
 }
 #features .big-box{
     width: 310px;
+    height: 355px;
     display: inline-block;
     background-color: #4995A3;
     margin-right: 50px;
@@ -532,6 +533,11 @@ li .fa {
 }
 .big-box:hover{
     outline: #F35F55 dashed 3px;
+}
+#features .big-box .cta2 a{
+  text-decoration: none;
+  color: #e2c1bf;
+  text-shadow: 3px 3px 2px #2a323a;
 }
 #features .small-box{
     width: 200px;
@@ -686,7 +692,7 @@ li .fa {
     text-align: center;
     border-radius: 4px;
     position: fixed;
-    bottom: 309px;
+    bottom: 308px;
     right: 30px;
     transition: background-color .3s, 
       opacity .5s, visibility .5s;
@@ -750,10 +756,14 @@ li .fa {
 .footer {
     padding: 60px 0 20px;
     background: #2D3B41;
-    color: #f7dada;
+    color: #b1b1b1;;
     font-size: 13px;
     text-align: center;
     font-family: 'Montserrat',sans-serif;
+  }
+  address{
+    letter-spacing: 1px;
+    font-style: normal;
   }
   .footer a {
     color: #fff;
