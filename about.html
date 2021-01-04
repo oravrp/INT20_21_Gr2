@@ -245,25 +245,26 @@
             </div>
 
                 <div class = "first_partner">
-                    <p id="country">IRELAND <span class = "date"> since 2010 </span></p>
+                    <span id="dummy"></span>
+                    <p id="country"><a onclick="playSound('audio/ireland.ogg.mp3');" title="Click here to listen to the national anthem of Ireland">IRELAND</a> <span class = "date"> since 2010 </span></p>
                     <p id="university">TYNDALL NATIONAL INSITUTE  <p> 
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
                 </div>
 
                 <div class = "second_partner">
-                    <p id="country">SWEDEN <span class = "date">since 2012</span> </p>
+                    <p id="country"><a onclick="playSound('audio/sweden.ogg.mp3');" title="Click here to listen to the national anthem of Sweden">SWEDEN </a><span class = "date">since 2012</span> </p>
                     <p id="university">LINNEUNIVERSITETET</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
                 </div>
 
                 <div class = "third_partner">
-                    <p id="country">GERMANY<span class = "date"> since 2008</span>
+                    <p id="country"><a onclick="playSound('audio/germany.ogg.mp3');" title="Click here to listen to the national anthem of Germany">GERMANY</a><span class = "date"> since 2008</span>
                         <p id="university">UNIVERSITÄT DUISBURG - ESSEN</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
                 </div>
 
                 <div class = "fourth_partner">
-                    <p id="country">AUSTRIA<span class = "date"> since 2008</span> </p>
+                    <p id="country"><a onclick="playSound('audio/austria.ogg.mp3');" title="Click here to listen to the national anthem of Austria">AUSTRIA</a><span class = "date"> since 2008</span> </p>
                     <p id="university">TU WIEN</p>
                     <p id = "last_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
                 </div>
@@ -271,7 +272,12 @@
          </div>
 
 </div>
-
+<script language="javascript" type="text/javascript">
+    function playSound(soundfile) {
+      document.getElementById("dummy").innerHTML=
+        "<embed src=\""+soundfile+"\" align = \"right\" autostart=\"true\" loop=\"false\" />";
+    }
+    </script>
 <!-- /Partners-->
 
 
