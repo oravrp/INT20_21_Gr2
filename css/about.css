@@ -32,7 +32,7 @@ header {
 }
 
 .slider-content{
- width: 100%;
+ width: 100vw;
  
 }
 
@@ -476,10 +476,6 @@ transform:translateY(-5px);
       
   }
 
-    #last_para{
-      padding-bottom:100px;
-    }
-
   .date{
       color:rgb(146, 37, 23);
   }
@@ -487,7 +483,7 @@ transform:translateY(-5px);
   .map{
     text-align: center;
     position:relative;
-    top:100px;
+    top: 300px;
   }
 
   .map p{
