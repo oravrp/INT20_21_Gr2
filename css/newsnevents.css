@@ -16,16 +16,50 @@ body {
     /* background: url(./pic.jpg) no-repeat center center/cover; */
     /* align-items: center; */
 }
-
 .video-container{
     position:absolute;
     top:0;
     left:0;
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit: cover;
     z-index:-2;
 }
+.switch-btn{
+    position:absolute;
+    left:0%;
+    bottom:0%;
+    width:7rem;
+    height:2rem;
+    display:flex;
+    /* border-radius:radius; */
+    align-items: center;
+    justify-content: space-around;
+    border:none;
+
+}
+.switch-btn span{
+    display: inline-block;
+    font-size: 0.85rem;
+    cursor:pointer;
+    text-transform: capitalize;
+    color:#3498db;
+}
+.switch{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top:0;
+    left:0;
+    background:#3498db;
+    margin:0;
+    display: block;
+   
+}
+.slide .switch{
+    left:50%;
+}
+
 .color-overlay{
     position:absolute;
     top:0;
@@ -34,14 +68,16 @@ body {
     width:100%;
     height:100%;
     opacity: 0.5;
+    z-index:-1;
 }
+
 #main h1,
 p {
     margin-bottom: 1rem;
 }
 
 #main a {
-    width: 100px;
+    width: 130px;
 }
 
 .header-container {
@@ -77,7 +113,8 @@ p {
 
 #info {
     display: grid;
-    grid-template-areas: 'sidebar box-1 box-2' 'sidebar box-3 box-4';
+    grid-template-areas: 'sidebar box-1 box-2' 
+                         'sidebar box-3 box-4';
     grid-gap: 2rem;
     width: 80%;
     margin: auto;
@@ -206,7 +243,7 @@ h6{
     width:100%;
     height:100%;
     position:absolute;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     top:-10px;
     left:-10px; 
     z-index:-2;
@@ -217,25 +254,35 @@ h6{
     top:0;
     left:0;
 }
-#h3{
-    width:90%;
-    display:block;
-}
+
 #id{
     width: 100%;
     height: 100vh;
     background: url("./air.jpg") no-repeat center center/cover;
 }
-#img{
-    width:50%;
+#h3{
+    width:100%;
+    height:70vh;
+    display:block;
+}
+.img{
+    float:left;
+    width: 50%;
+    height: 70vh;
+    background: url("/img/newsneventsAirPolution.jpg") no-repeat center center/cover;
+
+
 }
 .icon{
     display: block;
     position: relative;
     float:right;
-    width:40%;
-    padding:100px 0px 100px 50px;
-    text-align: center;
+    width: 50%;
+    height:100%;
+    text-align: center; 
+    padding-top:110px;
+    font-size: 1.2rem;
+  
 }
 .icon i{
     font-size: small;
@@ -247,23 +294,40 @@ h6{
     margin:auto;
     padding: 0.5rem 1rem;
     background: green;
-    width: 100px;
+    width: 140px;
     color: white;
-    
-  
 }
 
-.paragraph1{
-    margin-bottom: 40px;
+.icon h2{
+    font-size: 2rem;
+}
+.icon p{
+    width:500px;
+    margin:20px auto;
+}
+.icon{
+    margin: 10px 0px;
 }
 li{
     list-style-type: none;
 }
-.img{
-        float:left;
-        width: 55%;
-        height: 70vh;
-        background: url("/img/newsneventsAirPolution.jpg") no-repeat center center/cover;
 
+@media screen and (max-width:500px){
+    #info2{
+        grid-template-columns: repeat(1, 1fr);
+        text-align:center;
+    }
+ }
+ @media screen and (max-width:500px){
     
-}
+     .img{
+         width:100%;
+         text-align: center;
+         display:block;
+     }
+     .icon{
+         width:100%;
+         text-align:center;
+         display:center;
+     }
+ }
