@@ -212,7 +212,7 @@ li .fa{
     width: 400px;
     height: 400px;
     perspective: 1000px;
-    margin-left: 70px;
+    margin-left: 50px;
     margin-top: 30px;
   }
   
@@ -308,7 +308,7 @@ li .fa{
 }
 .table {
     margin-top: 30px;
-    margin-left: 350px;
+    margin-left: 300px;
     text-align: center;
 }
 table {
@@ -345,6 +345,30 @@ td {
     font-size: 18px;
     font-family: poppins;
 }
+
+/*-------------Styling description lists----------------- */
+
+.dl-text {
+    margin-top: 30px;
+    text-align: center;
+}
+.dl-text {
+    font-size: 25px;
+    color: cornflowerblue;
+    font-family: poppins;
+}
+.dl {
+    margin-top: 30px;
+    margin-left: 300px;
+    font-size: 20px;
+    font-family: poppins;
+}
+.dl dt {
+    font-weight: bold;
+}
+.dl dd {
+    margin-left: 40px;
+}
 .covid-text {
     margin-top: 30px;
     text-align: center;
@@ -359,7 +383,7 @@ td {
     margin-top: 30px;
     position: relative;
     display: flex;
-    cursor: url(img/Cursor3.png), pointer;
+    cursor: url(img/Cursor3.png), pointer ;
 }
 .faces .face {
     position: relative;
