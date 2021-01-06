@@ -3,31 +3,37 @@ const menu = [{
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
         header: "Ora Vrapcani",
+        contact: "twitteracc",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
         header: "Loreta Pajaziti",
+        contact: "twitteracc",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
         header: "Lind Krasniqi",
+        contact: "twitteracc",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
         header: "Lum Dukaj",
+        contact: "twitteracc",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
         header: "Florian Halimi",
+        contact: "twitteracc",
     },
     {
         img: "/img/StaffPhoto.png",
         text: "Lorem ipsum dolor sit amet.",
-        header: "Flamur Mu$tafa",
+        header: "Flamur Mustafa",
+        contact: "twitteracc",
     },
 
 ];
@@ -45,6 +51,7 @@ function displayMenuItems(item) {
     <img src="./${menuItem.img}" alt="" >
     <h1>${menuItem.header}</h1>
     <p>${menuItem.text}</p>
+    <a href="https://twitter.com/?lang=en" target="_blank">${menuItem.contact}</a>
 </div>`;
 
     });

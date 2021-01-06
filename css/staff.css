@@ -65,6 +65,20 @@ span.fade {
     margin-top: 50px;
 }
 
+.gallery .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    padding-top: 1rem;
+    border-style: solid;
+    border-radius: 5%;
+    height: 300px;
+    width: 320px;
+}
+
 .gallery img {
     width: 150px;
     border-radius: 50%;
@@ -92,57 +106,10 @@ span.fade {
     margin: 0.5rem 0 0 0;
 }
 
-.content {}
-
 .gallery p {
     color: black;
     font-size: 1rem;
     margin: 0 0 2rem 0;
-}
-
-.gallery .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.wraper {
-    margin: 20px 0;
-    background-color: #333;
-    height: 50px;
-}
-
-.parallax-i {
-    background: url('/img/new4.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: block;
-    height: 500px;
-}
-
-.gallery img:hover {
-    transition: ease-out;
-    transform: scale(1.2);
-}
-
-.second-content {
-    display: flex;
-}
-
-.first-half {
-    margin: 0;
-    width: 50%;
-    text-align: center;
-}
-
-.second-content img {
-    width: 100%;
-}
-
-.second-content p {
-    padding: 130px 30px;
 }
 
 @media (max-width:764px) {
