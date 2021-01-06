@@ -293,6 +293,7 @@ li .fa {
 }
 .table-sec td{
     border-top: 1px solid #ddd;
+    overflow-wrap: break-word;
 }
 
 /*----------------- Diagrami ------------*/

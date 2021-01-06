@@ -538,6 +538,7 @@ li .fa {
 }
 .big-box:hover{
     outline: #F35F55 dashed 3px;
+    outline-offset:1px;
 }
 #features .big-box .cta2 a{
   text-decoration: none;
@@ -598,6 +599,7 @@ li .fa {
  .parallax 
  {
    background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat 100%;
+   background-origin: border-box;
    opacity: 0.2;
    margin-top: -80px;      
  }
@@ -654,6 +656,7 @@ li .fa {
     position: relative;
     left: 45%;
     top: 88px;
+    background: radial-gradient(ellipse at top, #c5a15a61, transparent), radial-gradient(ellipse at bottom, #ffffff, transparent);
     color: #14293c;
     border: 3px solid #14293c;
   }
