@@ -22,7 +22,10 @@ body {
 }
 
 .text {
-    margin-left: 13%;
+    justify-content: center !important;
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
     font-size: 30px;
     font-family: 'Jura', sans-serif;
     padding: 10rem 0 0 0;
@@ -35,8 +38,26 @@ body {
 }
 
 .text p {
+    margin: 0 auto;
     width: 600px;
     color: rgb(180, 238, 225);
+    margin-bottom: 5rem;
+}
+
+.text a {
+    font-size: medium;
+    margin-top: 2rem;
+    background-color: red;
+    color: white;
+    padding: .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30%;
+    -webkit-border-radius: 500px;
+}
+
+.text a:hover {
+    background-color: #555;
 }
 
 span {
@@ -58,11 +79,12 @@ span.fade {
 
 .gallery {
     display: grid;
-    width: 1108px;
+    width: 100%;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     transition: 0.5s all ease-in-out;
     margin-top: 50px;
+    justify-content: center;
 }
 
 .gallery .content {
@@ -112,16 +134,20 @@ span.fade {
     margin: 0 0 2rem 0;
 }
 
-@media (max-width:764px) {
+@media (max-width:1017px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
+        margin: 10px auto;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 678px) {
     .gallery {
         grid-template-columns: repeat(1, 1fr);
-        text-align: center;
+        margin: 0 auto;
+    }
+    .gallery .content {
+        margin: 10px auto;
     }
 }
