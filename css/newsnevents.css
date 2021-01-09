@@ -12,7 +12,9 @@ header {
     z-index: 2;
     top:0;
   }
-
+.menu{
+    margin-top:15px;
+}
 #main {
     width: 100%;
     position:relative;
@@ -195,6 +197,7 @@ p {
     text-transform: capitalize;
    
 }
+
 h2{
     text-align: center;
 }
@@ -316,6 +319,7 @@ h6{
     text-align: center; 
     padding-top:110px;
     font-size: 1.2rem;
+    margin:10px 0px;
   
 }
 .icon i{
@@ -331,7 +335,10 @@ h6{
     width: 140px;
     color: white;
 }
-
+.paragrapH {
+    text-align: center;
+    padding-left: 12px;
+}
 .icon h2{
     font-size: 2rem;
 }
@@ -339,11 +346,10 @@ h6{
     width:500px;
     margin:20px auto;
 }
-.icon{
-    margin: 10px 0px;
-}
-li{
-    list-style-type: none;
+
+.icon li{
+  
+    list-style-position: inside;
 }
 
 @media screen and (max-width:500px){
