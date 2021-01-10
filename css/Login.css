@@ -6,15 +6,13 @@
 }
 body{
     font-family: 'Montserrat', sans-serif;
-    background: #f6f4f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: -20px 0 50px;
+    margin: 0 50px;
 }
-
 
 h1 {
     font-weight: bold;
@@ -119,8 +117,7 @@ button.ghost {
 }
 
 .overlay {
-    background: cyan;
-    background: linear-gradient(to right, #4995A3, cyan ) no-repeat 0 0 / cover;
+    background-image: linear-gradient(62deg, #10637b 0%, #4995A3 68%);
     color: #fff;
     position: relative;
     left: -100%;
