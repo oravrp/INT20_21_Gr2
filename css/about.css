@@ -6,6 +6,7 @@
     3. Objectives
     4. Featured Projects
     5. Partners
+    6. Video Slider
 */
 
 
@@ -428,7 +429,8 @@ transform:translateY(-5px);
   
   #text-one{
     color: #8c9597;
-    margin-left: 145px;
+    position:relative;
+    left:15%;
     text-align: left;
     margin-top: 100px;
     font-weight:bold;
@@ -436,7 +438,8 @@ transform:translateY(-5px);
 
   #text-two{
     color: black;
-    margin-left: 145px;
+    position:relative;
+    left:15%;
     text-align: left;
     font-weight:bold;
   }
@@ -489,7 +492,21 @@ transform:translateY(-5px);
   .map p{
     padding-bottom:50px;
     font-family: 'poppins';
-    font-weight:bold;
+    font-weight: bold;
   }
 
-  
+  /*---------- 1. VIDEO SLIDER ---------- */
+
+  .slideshow-container h2{
+    font-family: 'poppins';
+    text-align: center;
+    padding-top: 30px;
+    color:rgb(3, 52, 85);
+  }
+
+  .slideshow-container .text{
+    padding-top:20px;
+    font-family: 'poppins';
+    color:rgb(3, 52, 85);
+    font-weight: bold;
+  }
