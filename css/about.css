@@ -95,12 +95,6 @@ header {
   
 }
 
-#first-slide:hover{
-  color:rgb(150, 150, 150);
-  border-color:rgb(150, 150, 150);
-}
-
-
 #second-slide{
   text-align: center;
   color: whitesmoke;
@@ -155,6 +149,9 @@ header {
     
 }
 
+.concepts .concepts-info h2:hover{
+  color:rgb(3, 73, 117);
+}
 
 .concepts .concepts-description h3 {
     text-align: center;
@@ -500,13 +497,26 @@ transform:translateY(-5px);
   .slideshow-container h2{
     font-family: 'poppins';
     text-align: center;
-    padding-top: 30px;
+    padding-top: 90px;
     color:rgb(3, 52, 85);
+    text-shadow: #030c0f;
+  }
+
+  .slideshow-container h2:hover{
+    color:rgb(6, 95, 155);
   }
 
   .slideshow-container .text{
     padding-top:20px;
+    padding-bottom: 30px;
     font-family: 'poppins';
     color:rgb(3, 52, 85);
     font-weight: bold;
+    text-shadow: #030c0f;
   }
+
+  .slideshow-container .text:hover{
+    color:rgb(6, 95, 155);
+  }
+
+ 

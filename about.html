@@ -15,6 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/navFooter.css">
+    <style>
+        header {
+            background-color: #4995A3;
+        }
+    </style>
 </head>
 
 <body>
@@ -207,7 +212,7 @@
       
 </div>
 
-<button type="button" class = "button"> <a href="#" style= "text-decoration: none; color:black;">FULL PROJECTS</a></button>
+<button type="button" class = "button"> <a href="case.html" style= "text-decoration: none; color:black;">FULL PROJECTS</a></button>
 
 </div>
 
@@ -224,11 +229,11 @@
             <p>Click the University logos!</p>
             <img src="img/eu_map.png" alt="Europe Map" style=" height: 600px; width:600px;" usemap="#workmap">
             <map name="workmap">
-                <area shape="rect" coords="55,200,200,250" alt="Tyndall" href="https://www.tyndall.ie/" onclick="myFunction()">
-                <area shape="rect" coords="420,35,530,135" alt="Linneuniversitetet" href="https://lnu.se/" onclick="myFunction()">
-                <area shape="rect" coords="310,215,435,260" alt="Duisburg" href="https://www.uni-due.de/en/" onclick="myFunction()">
-                <area shape="rect" coords="290,360,365,430" alt="TU Wien" href="https://www.tuwien.at/" onclick="myFunction()">
-                <area shape="circle" coords="325,530,35" alt="UP" href="https://www.uni-pr.edu/" onclick="myFunction()">
+                <area shape="rect" coords="55,200,200,250" alt="Tyndall" href="https://www.tyndall.ie/" target="_blank" onclick="myFunction()">
+                <area shape="rect" coords="420,35,530,135" alt="Linneuniversitetet" href="https://lnu.se/" target="_blank" onclick="myFunction()">
+                <area shape="rect" coords="310,215,435,260" alt="Duisburg" href="https://www.uni-due.de/en/" target="_blank" onclick="myFunction()">
+                <area shape="rect" coords="290,360,365,430" alt="TU Wien" href="https://www.tuwien.at/" target="_blank" onclick="myFunction()">
+                <area shape="circle" coords="325,530,35" alt="UP" href="https://www.uni-pr.edu/"  target="_blank" onclick="myFunction()">
               </map>
               <script>
                 function myFunction() {
@@ -256,7 +261,7 @@
                 </div>
 
                 <div class = "second_partner">
-                    <p id="country">SWEDEN<span class = "date">since 2012</span> </p>
+                    <p id="country">SWEDEN<span class = "date"> since 2012</span> </p>
                     <p id="university">LINNEUNIVERSITETET</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
                     <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Sweden"> 
@@ -292,31 +297,31 @@
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
-    <h2>MEET OUR PARTNERS</h2>
-    <div class="mySlides fade">
-      <video width="380" height="260" style=" margin-top:20px;"  controls>
+    <h2><u>MEET OUR PARTNERS</u></h2>
+    <div class="mySlides fade" style="display: block; padding-top: 0px;">
+      <video width="600" height="420" style=" margin-top:20px;"  controls>
         <source src="video/tyndall.mp4" type="video/mp4">
               Your browser does not support the video tag.
     </video>
-      <div class="text">TYNDALL NATIONAL INSITUTE</div>
+      <div class="text">- TYNDALL NATIONAL INSITUTE -</div>
     </div>
   
-    <div class="mySlides fade">
+    <div class="mySlides fade" style="display: block; padding-top: 0px;">
      
-      <video width="380" height="260" style=" margin-top:20px;"  controls>
+      <video width="600" height="420" style=" margin-top:20px;"  controls>
         <source src="video/TU-wien.mp4" type="video/mp4">
               Your browser does not support the video tag.
     </video>
-      <div class="text">TU WIEN</div>
+      <div class="text">- TU WIEN -</div>
     </div>
   
-    <div class="mySlides fade">
+    <div class="mySlides fade" style="display: block; padding-top: 0px;">
       
-      <video width="380" height="260" style=" margin-top:20px;"  controls>
+      <video width="600" height="420" style=" margin-top:20px;"  controls>
         <source src="video/linnaeus.mp4" type="video/mp4">
                Your browser does not support the video tag.
     </video>
-      <div class="text">LINNEUNIVERSITETET</div>
+      <div class="text">- LINNEUNIVERSITETET -</div>
     </div>
   
     <!-- Next and previous buttons -->
@@ -325,10 +330,6 @@
   </div>
 
   
-  <!-- The dots/circles -->
-
-
-
 <script>
     var slideIndex = 1;
 showSlides(slideIndex);
@@ -359,12 +360,8 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
-
-
  
 <!-- /Video   -->
-
-
 
  <!-- Footer -->
  <footer id="footer" class="footer">
