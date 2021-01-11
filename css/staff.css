@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap');
-#{
- box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 6%;
+    transition: 0.8s;
+    position: fixed;
+    left: 0;
+    background-color: #4995A3;
+    width: 100%;
+    z-index: 2;
+    top:0;
+  }
 body {
     padding: 0;
     margin: 0;
