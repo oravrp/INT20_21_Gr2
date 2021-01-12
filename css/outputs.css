@@ -272,7 +272,6 @@ td {
     margin-top: 30px;
     position: relative;
     display: flex;
-    cursor: url(img/Cursor3.png), pointer ;
 }
 .faces .face {
     position: relative;
