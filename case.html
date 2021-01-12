@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study</title>
-    <meta name="description" content="AirSense is a website...">
-    <meta name="keywords" content="air,anti-pollution,sensor">
     <link rel="stylesheet" type="text/css" href="css/case.css">
     <link rel="stylesheet" type="text/css" href="css/navFooter.css">
     <link rel="icon" type="image/png" sizes="16x16" href="img/logo1.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&amp;display=swap" rel="stylesheet">
+    <script>
+        $(function(){
+            $('figcaption').hide();
+            $('figure').hover(function(){
+                $('figcaption').toggle();
+            });
+            $('#other').click(function(){
+                alert('You can drag and drop the first image!');
+            })
+        });
+    </script>
 </head>
 
 <body>
@@ -43,8 +51,7 @@
                         </div>
                     </li>
                 </div>
-                <li><a href="newsnevents.html">News &amp; Events</a></li>
-
+                <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
         <a class="cta" href="contact.html">Contact</a>
@@ -52,7 +59,10 @@
     </header>
     <div class="banner">
         <h1>Kosovo Case</h1>
-        <img src="img/sc.png" alt="air quality">
+        <figure>
+            <img src="img/sc.png" alt="air quality">
+            <figcaption style="text-align: center; color:rgb(167, 167, 167);">Fig.1-Visualization</figcaption>
+        </figure>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <defs>
@@ -316,6 +326,16 @@
             <h4>Lorem ipsum dolor sit amet consectetur adip color shofooo ago!</h4>
         </div>
     </article>
+    <div class="dragDrop">
+        <div class="empty">
+          <div class="fill" draggable="true"> </div>
+        </div>
+      
+        <div class="empty" id="other">
+        </div>
+        <p><mark>Drag&Drop Effect</mark></p>
+      </div>
+      <br><br>
     <!--Footer-->
     <footer id="footer" class="footer">
         <div class="container text-center">
