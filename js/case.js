@@ -12,37 +12,53 @@ fill.addEventListener('dragend', dragEnd);
 
 // Loop through empty boxes and add listeners
 for (const empty of empties) {
-  empty.addEventListener('dragover', dragOver);
-  empty.addEventListener('dragenter', dragEnter);
-  empty.addEventListener('dragleave', dragLeave);
-  empty.addEventListener('drop', dragDrop);
+    empty.addEventListener('dragover', dragOver);
+    empty.addEventListener('dragenter', dragEnter);
+    empty.addEventListener('dragleave', dragLeave);
+    empty.addEventListener('drop', dragDrop);
 }
 
 // Drag Functions
 
 function dragStart() {
-  this.className += ' hold';
-  setTimeout(() => (this.className = 'invisible'), 0);
+    this.className += ' hold';
+    setTimeout(() => (this.className = 'invisible'), 0);
 }
 
 function dragEnd() {
-  this.className = 'fill';
+    this.className = 'fill';
 }
 
 function dragOver(e) {
-  e.preventDefault();
+    e.preventDefault();
 }
 
 function dragEnter(e) {
-  e.preventDefault();
-  this.className += ' hovered';
+    e.preventDefault();
+    this.className += ' hovered';
 }
 
 function dragLeave() {
-  this.className = 'empty';
+    this.className = 'empty';
 }
 
 function dragDrop() {
-  this.className = 'empty';
-  this.append(fill);
+    this.className = 'empty';
+    this.append(fill);
+}
+
+//Perdorimi i metodave Exec() and Test() tek RegEx
+function kliko() {
+    var str = document.getElementById('check').innerHTML;
+    var patt = new RegExp("Effect");
+    //var res = patt.test(str);
+    var res = patt.exec(str);
+    document.getElementById("check").innerHTML = res;
+}
+
+newRe = new RegExp('Drag')
+str1 = document.getElementById('check').innerHTML;
+// Check whether regular expression exists in the string.
+if (newRe.test(str1)) {
+    alert("'Drag' is found in " + str1);
 }
