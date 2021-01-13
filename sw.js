@@ -5,7 +5,11 @@ const cacheAssets = [
     'staff.html',
     '/css/staff.css',
     '/js/staff.js',
-    '/css/navFooter.css'
+    '/css/navFooter.css',
+    '/img/StaffPhoto.png',
+    '/img/logo1.png',
+    '/logo_airsense.png',
+    '/js/homepage.js'
 ]
 
 
