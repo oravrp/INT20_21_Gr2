@@ -134,6 +134,21 @@ p {
     background: url("./air.jpg");
     background-position: center;
 }
+.options-container{
+    text-align: left;
+    width:25%;
+    margin-left:5px;
+}
+
+
+.btna{
+    background: #447CA9;
+    color:black;
+    border:none;
+    font-size:15px;
+    margin-bottom:5px;
+    padding:2px;
+}
 
 #info {
     display: grid;
@@ -223,9 +238,9 @@ h6{
  @font-face {
         font-family: 'amblebold';
     
-        src:url('/fonts/Amble-Bold-webfont.woff') format('woff'),
-            url('/fonts/Amble-Bold-webfont.eot')  format('embedded-opentype'),
-            url('/fonts/Amble-Bold-webfont.ttf') format('truetype');
+        src:url('../fonts/Amble-Bold-webfont.woff') format('woff'),
+            url('../fonts/Amble-Bold-webfont.eot')  format('embedded-opentype'),
+            url('../fonts/Amble-Bold-webfont.ttf') format('truetype');
             
         font-weight: normal;
         font-style: normal;
