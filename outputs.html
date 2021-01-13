@@ -9,6 +9,38 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/navFooter.css">
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script>
+            $(document).ready( function() {
+                $(".dl-text").click(function() {
+                    $(".dl").slideToggle("slow");
+                });
+                $(".text").click(function() {
+                    $(".smile-face").remove();
+                });
+               /* var html = '<br><input type="text" id="inputAdd">'
+                $(".AddMoreElements").click(function() {
+                    $(".addRemove").append(html);
+                });
+                $(".RemoveElement").click(function() {
+                    $("input:last").remove();
+                });
+                $(".GetValues").click(function () {
+                    let values = [];
+                    $("input").each(function(i, elem) {
+                        values.push($(elem).val());
+                    });
+                    alert("Values of elements are : " + values.join(', '));
+                })*/
+                $(".info").click(function() {
+                    $("#p1").append("Lorem Ipsum");
+                })
+                $(".card1-back").click(function() {
+                   let x =  $(".card1-back").text();
+                   alert("Text on background of this card is : " + x)
+                })
+            });
+        </script>
         <style>
             .video {
                 width: 400px;
@@ -64,7 +96,7 @@
         <h1>Air Monitors</h1>  
     </div>
     <div class="info">
-        <p>
+        <p id="p1">
             Part of the <span>AIRSENSE</span> Group, we are committed to sustainable development and helping companies and public authorities limit their environmental impact. We offer products and services that prevent and control air, noise and vibration pollution, increase the productivity and reliability of industrial machinery & contribute to 
             the development of effective, robust & noiseless products
         </p>
@@ -233,6 +265,19 @@
                 </div>
             </div>
           </div>
+         <!-- <div class="addRemoveTxt">
+            <h1>Using these inputs you can show what you would want to see on this page in the future</h1>
+          </div>
+          <div class="addRemove">
+              <input type="text" id="inputAdd">
+              <br>
+              <input type="text" id="inputAdd">
+          </div>
+          <div class="addRemoveButtons">
+              <button class="AddMoreElements">Add More Elements </button>
+              <button class= "RemoveElement">Remove Elements</button>
+              <button class= "GetValues">Get Element Values</button>
+          </div>-->
           <div class="message">
               <div class = "svg">
         <svg class="smile-face" widh = "100px" height = "123px" viewbox = "0 0 250px 250px">

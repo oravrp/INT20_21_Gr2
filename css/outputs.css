@@ -328,6 +328,41 @@ td {
     left: 20px;
     justify-content: center;
 }
+/*-----------Styling Add Remove Elements ------------------ */
+/*
+.addRemoveTxt {
+    margin-top: 40px;
+    text-align: center;
+}
+.addRemoveTxt h1 {
+    font-family: poppins;
+    color: rgb(5, 39, 134);
+}
+.addRemove {
+    margin-top: 30px;
+    text-align: center;
+}
+.addRemove input {
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+    margin: 10px 15px;  
+}
+.addRemove button {
+    width: 30px;
+    border: 2px solid red;
+    color: black;
+}
+.addRemoveButtons {
+    margin-top: 30px;
+    text-align: center;
+}
+.addRemoveButtons button {
+    margin: 0px 20px;
+    padding: 5px 10px;
+    border: 2px solid green;
+}*/
+
 /*----------Styling the svg smiley face---------- */
 .face1 {
     fill: yellow;
@@ -354,7 +389,7 @@ td {
 .message .text {
     margin-top: 60px;
     text-align: center;
-    margin-left: 80px;
+    margin-left: 130px;
 }
 .message .text h1 {
     font-style: italic;
