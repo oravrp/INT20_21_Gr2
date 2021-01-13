@@ -149,3 +149,13 @@ function changeFunc(c) {
 
     }
 }
+
+if ('serviceWorker' in navigator) {
+    console.log('online');
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            .register('../sw.js')
+            .then(reg => console.log('serviceworker registered'))
+            .catch(err => console.log(`service worker errorr ${err}`))
+    })
+}
