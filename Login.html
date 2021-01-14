@@ -19,7 +19,7 @@
                 <H1>Create Account</H1>
                 <span>Use your email for registration </span>
                 <input type="text" placeholder="Name" required />
-                <input type="email" id="email2" placeholder="Email" />
+                <input type="email" id="email2" autofocus pattern="[^ @]*@[^ @]*" placeholder="Email" />
                 <p id="msg2" style="color:#F35F5F; margin:1%"></p>
                 <input type="password" id="psw2" placeholder="Password" required />
                 <p id="warn2" style="color:#F35F5F; margin:1%"></p>
@@ -35,6 +35,7 @@
                 <input type="password" id="psw" placeholder="Password" required />
                 <p id="warn" style="color:#F35F5F; margin:1%"></p>
                 <a href="#">Forgot your password?</a>
+                <keygen name="security" form="secureform">
                 <button type="submit" onclick="CheckPassword(1)" id="bt1">Log In</button>
             </form>
         </div>
