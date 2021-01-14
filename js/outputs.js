@@ -23,7 +23,3 @@ document.onmousemove = function () {
        eyeballs[i] .style.transform = "translate(" + x + "," + y + ")";
    }
 }
-//Change Text on click
-function changeText () {
-   document.getElementById("text").innerHTML = "Faleminderit p&eumlr koh&eumln tuaj, konsumator&eumlt jan&euml &ccedilelesi i suksesit ton&euml !";
-}
