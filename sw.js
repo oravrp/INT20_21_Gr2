@@ -1,31 +1,11 @@
-const cacheName = 'v1'
+const cacheName = 'v2'
 
-const cacheAssets = [
-    './',
-    'staff.html',
-    '/css/staff.css',
-    '/js/staff.js',
-    '/css/navFooter.css',
-    '/img/StaffPhoto.png',
-    '/img/logo1.png',
-    '/logo_airsense.png',
-    '/js/homepage.js'
-]
 
 
 //install event
 self.addEventListener('install', e => {
     console.log("service worker installed")
 
-    e.waitUntil(
-        caches
-        .open(cacheName)
-        .then(cache => {
-            console.log("service worker caching Files")
-            cache.addAll(cacheAssets);
-        })
-
-    )
 })
 self.addEventListener('activate', e => {
     console.log('service worker activated')
@@ -48,6 +28,15 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
     console.log("service worker fetching")
     e.respondWith(
-        fetch(e.request).catch(() => caches.match(e.request))
+        fetch(e.request).then(res => {
+            // make clone of response
+            const resClone = res.clone();
+            caches.open(cacheName)
+                .then(cache => {
+                    cache.put(e.request, resClone)
+                })
+            return res
+        }).catch(err => caches.match(e.request).then(res => res))
+
     )
 })
