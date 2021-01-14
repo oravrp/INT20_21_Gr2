@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACMAN</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0px;
+        }
+
+        div.row div {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+        div.brick {
+            background-color: blue;
+        }
+
+        div.coin {
+            background: url('img/coin.gif');
+            background-size: cover;
+        }
+
+        div.empty {}
+
+        div#pacman {
+            background: url('img/pacman.gif');
+            background-size: cover;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+
+        #score {
+            background-color: white;
+            width: 75px;
+            border: 2px solid blue;
+            height: 30px;
+            font-size: 25px;
+            padding: 7px;
+        }
+
+        div.cherry {
+            background: url('img/cherry.png');
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="world"></div>
+        <div id="pacman" style="top:20px; left:20px;"></div>
+        <div id='score'>0</div>
+    </div>
+    <script src="js/pacman.js" type="text/javascript"></script>
+</body>
+
+</html>

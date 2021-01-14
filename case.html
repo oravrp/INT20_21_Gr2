@@ -20,7 +20,14 @@
             });
             $('#other').click(function(){
                 alert('You can drag and drop the first image!');
-            })
+            });
+            $('.fourth').hide();
+            $('#map').click(function(){
+                $('#st').show();
+            });
+            $('#info').click(function(){
+                $('#sec').show();
+            });
         });
     </script>
 </head>
@@ -60,7 +67,7 @@
     <div class="banner">
         <h1>Kosovo Case</h1>
         <figure>
-            <img src="img/sc.png" alt="air quality">
+            <img src="img/sc.png" id="map" alt="air quality">
             <figcaption style="text-align: center; color:rgb(167, 167, 167);">Fig.1-Visualization</figcaption>
         </figure>
     </div>
@@ -75,6 +82,29 @@
             d="M0,160L120,149.3C240,139,480,117,720,112C960,107,1200,117,1320,122.7L1440,128L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
         </path>
     </svg>
+    <div class="fourth tables" id="st">
+        <table id="hid">
+            <caption><b><i><u>Info:</u></i></b></caption>
+            <tbody>
+                <tr>
+                    <th>Country</td>
+                    <td class="objectPurpose"></td>
+                </tr>
+                <tr>
+                    <th>City</td>
+                    <td class="objectPurpose"></td>
+                </tr>
+                <tr>
+                    <th>PM10</td>
+                    <td class="objectPurpose"> </td>
+                </tr>
+                <tr>
+                    <th>Postal Code</td>
+                    <td class="objectPurpose"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div id="feat">
         <div class="sec-title">
             <h2>lorem systeme ipsumdolor </h2>
@@ -323,7 +353,30 @@
             </div>
         </div>
         <div class="note">
-            <h4>Lorem ipsum dolor sit amet consectetur adip color shofooo ago!</h4>
+            <h4 id="info">Lorem ipsum dolor sit amet consectetur adip color shofooo ago!</h4>
+        </div>
+        <div class="fourth tables" id="sec" style="top: 63px; width:120px">
+            <table id="hid">
+                <caption><b><i><u>Info:</u></i></b></caption>
+                <tbody>
+                    <tr>
+                        <th>Q1</td>
+                        <td class="objectPurpose1"></td>
+                    </tr>
+                    <tr>
+                        <th>Q2</td>
+                        <td class="objectPurpose1"></td>
+                    </tr>
+                    <tr>
+                        <th>Q3</td>
+                        <td class="objectPurpose1"> </td>
+                    </tr>
+                    <tr>
+                        <th>Q4</td>
+                        <td class="objectPurpose1"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </article>
     <div class="dragDrop">
@@ -354,6 +407,7 @@
         </div>
     </footer>
     <!--/ Footer-->
+    
     <script src="js/homepage.js"></script>
     <script src="js/case.js"></script>
 </body>

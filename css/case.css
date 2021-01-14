@@ -28,7 +28,40 @@ body {
     top: 88%;
     text-align: center;
     color: rgb(255 255 255 / 52%);
-} 
+}
+/* Hidden tables */
+#columnPurpose{
+  column-count: 3;
+  column-gap: 10px;
+  column-width: 133px;
+  column-rule-width: 3px;
+  column-rule-style: groove;
+  column-rule-color: #E2CBA0;
+}
+
+.tables
+{
+  width: 250px;
+  text-align: center;
+  position: relative;
+  top: 192px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+#hid
+{
+  
+  border-style: solid;
+  border-color: #E2CBA0;
+  border-width: 2px;
+}
+
+#hid th,#hid td 
+{
+  padding: 15px;
+  border:1px solid #0D153C;
+}
+ 
 /*-----------------------------------------------*/
 #feat{
     display: inline-block;
