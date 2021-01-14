@@ -327,7 +327,7 @@ transform:translateY(-5px);
     text-align: center;
     top:300px;
     position:relative;
-    
+    border-image:round;
   }
 
 
@@ -497,6 +497,7 @@ transform:translateY(-5px);
     font-weight: bold;
   }
 
+
   /*---------- 6. VIDEO SLIDER ---------- */
 
   .slideshow-container h2{
@@ -530,6 +531,7 @@ transform:translateY(-5px);
  .canv-img{
    width:100%;
    height: 100%;
+
  }
 
  .canv-img h2{
@@ -549,7 +551,7 @@ transform:translateY(-5px);
   width: 700px; 
   height: 500px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   display: block;
