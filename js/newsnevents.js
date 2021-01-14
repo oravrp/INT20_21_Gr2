@@ -37,15 +37,15 @@ $('#btnSlideTog').click(function(){
     $('#info2').slideToggle(2000);
 });
 $('#moveRight').click(function(){
-    $('#info2').animate({
-        left:100,
-        opacity:0.7
+    $('#box1').animate({
+        right:0,
+        opacity:1
     });
 });
 $('#moveLeft').click(function(){
-    $('#info2').animate({
-        left:0,
-        opacity:1
+    $('#box1').animate({
+        right:150,
+        opacity:0.7
     });
 });
 
@@ -61,11 +61,11 @@ BoxA.animate({
     right:150
 });
 BoxA.animate({
-    bottom:90
+    bottom:70
 });
 BoxA.animate({
     right:0,
-    bottom:90
+    bottom:70
 });
 BoxA.animate({
     right:0,
