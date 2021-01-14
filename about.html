@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/navFooter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         header {
             background-color: #4995A3;
@@ -200,6 +201,7 @@
         <img src="img/17.jpg" alt="Bikes" width = "600px" height = "400px" >
     </a>
     </div>
+    
 
     <div class = "gallery_column">
         <a target="_blank" href="img/19.jpg">
@@ -239,7 +241,10 @@
                 function myFunction() {
                   alert("You clicked the University Logo. It will take you to the Official Webpage of the University!");
                 }
+
                 </script>
+
+
         </div>
     </div>
     
@@ -297,14 +302,32 @@
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
-    <h2><u>MEET OUR PARTNERS</u></h2>
+    <h2 id="meet" title="Double click on me!"><u>MEET OUR PARTNERS</u></h2>
+ <script>
+        $(document).ready(function(){
+          $("#meet").dblclick(function(){
+            alert("You have entered the 'Meet our Partners' section. Here you can watch videos in order to get to know our partners more. Slide through!");
+          });
+        });
+        </script>
     <div class="mySlides fade" style="display: block; padding-top: 0px;">
       <video width="600" height="420" style=" margin-top:20px;"  controls>
         <source src="video/tyndall.mp4" type="video/mp4">
               Your browser does not support the video tag.
     </video>
-      <div class="text">- TYNDALL NATIONAL INSITUTE -</div>
+
+      <div class="text" id="tyndall" title="Double click to learn more!">- TYNDALL NATIONAL INSITUTE -</div>
+
+      <script>
+        $(document).ready(function(){
+        $("#tyndall").dblclick(function(){
+            alert("Tyndall National Institute is a European research centre in integrated ICT hardware and systems and works with industry and academia to transform research into products. Core research areas include photonics and electronics.");
+        });
+        });
+     </script>
+
     </div>
+      
   
     <div class="mySlides fade" style="display: block; padding-top: 0px;">
      
@@ -312,8 +335,19 @@
         <source src="video/TU-wien.mp4" type="video/mp4">
               Your browser does not support the video tag.
     </video>
-      <div class="text">- TU WIEN -</div>
+
+      <div class="text" id="tuwien" title="Double click to learn more!">- TU WIEN -</div>
+
+      <script>
+        $(document).ready(function(){
+        $("#tuwien").dblclick(function(){
+            alert("TU Wien is one of the major universities in Vienna, Austria. The university has received extensive international and domestic recognition in teaching as well as in research, and it is a highly esteemed partner of innovation-oriented enterprises.");
+        });
+        });
+     </script>
+
     </div>
+    
   
     <div class="mySlides fade" style="display: block; padding-top: 0px;">
       
@@ -321,7 +355,16 @@
         <source src="video/linnaeus.mp4" type="video/mp4">
                Your browser does not support the video tag.
     </video>
-      <div class="text">- LINNEUNIVERSITETET -</div>
+
+      <div class="text" id="linnaeus" title="Double click to learn more!">- LINNEUNIVERSITETET -</div>
+      <script>
+        $(document).ready(function(){
+        $("#linnaeus").dblclick(function(){
+            alert("Linnaeus University is a state university in the Småland region of Sweden. It has two campuses, one in Växjö and one in Kalmar. Linnaeus University was established in 2010 by a merger of former Växjö University and Kalmar University, and is named in honour of the Swedish botanist Carl Linnaeus.");
+        });
+        });
+     </script>
+
     </div>
   
     <!-- Next and previous buttons -->
@@ -364,7 +407,7 @@ function showSlides(n) {
 <!-- /Video   -->
 
 <!-- Canvas Image-->
-<div class = "canv-img" style="   border-style: solid;
+<div class = "canv-img" style="border-style: solid;
 border-width: 0px 0px 30px 0px;
 -moz-border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;
 -webkit-border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;
@@ -422,13 +465,7 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
     
 </div> 
 
-
-
 <!-- /Canvas Image-->
-
-
-
-
 
  <!-- Footer -->
  <footer id="footer" class="footer">
