@@ -1,3 +1,9 @@
+/* A function to change the header-nav styling  while scrolling */
+window.addEventListener("scroll", function () {
+  var header = document.querySelector("header");
+ header.classList.toggle("sticky", window.scrollY > 0);
+});
+
 //Ordered lists animation on scroll
 const container = document.querySelector('.lists');
 observer = new IntersectionObserver ((entries)=> {

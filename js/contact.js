@@ -1,4 +1,8 @@
-    
+    /* A function to change the header-nav styling  while scrolling */
+ window.addEventListener("scroll", function () {
+	var header = document.querySelector("header");
+   header.classList.toggle("sticky", window.scrollY > 0);
+});
 	// ---------- Validating form --------------- 
 
     var emri = document.getElementById('name');
@@ -27,13 +31,21 @@
 			emriErr.style.visibility = "hidden";
 			emri.style.border = "1px solid green";
 		} 
-  		 else if (!isNaN(emri.value)) {
+  		else if (!isNaN(emri.value)) {
               emriErr.innerText = "You can not put numbers in this field";
               emriErr.style.color = "red";
 			  emriErr.style.visibility = "visible";
 			  emri.style.border = "1px solid red";
               messages.push("This field is required");
-          }
+		  }
+		else if (!allLetter(emri.value)) {
+			alert("Emri nuk eshte valid");
+			emriErr.innerText = "Invalid Name";
+			emriErr.style.color = "red";
+			emriErr.style.visibility = "visible";
+			emri.style.border = "1px solid red";
+			messages.push("This field is required");
+		  }
   		if (mail.value === '' || mail.value == null) {
 			  mailErr.style.visibility = "visible";
 			  mail.style.border = "1px solid red";
@@ -137,12 +149,15 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-function ValidateEmail(mail) 
-{
- if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
-}
+function allLetter(name)
+      { 
+      var letters = /[a-z]/;
+      if(letters.test(name.value))
+      {
+      return true;
+      }
+      else
+      {
+      return false;
+      }
+      }
