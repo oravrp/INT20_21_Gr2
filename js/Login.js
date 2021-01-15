@@ -85,3 +85,8 @@ function vlera() {
     var max = Math.max(2, 7, 21, 9, 5);
     document.getElementById('max1').innerHTML = max.toExponential(3).toString() + " " + isNaN(max);
 }
+/* A function to change the header-nav styling  while scrolling */
+window.addEventListener("scroll", function () {
+    var header = document.querySelector("header");
+   header.classList.toggle("sticky", window.scrollY > 0);
+});
