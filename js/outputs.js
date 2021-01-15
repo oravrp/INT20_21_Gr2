@@ -29,3 +29,6 @@ document.onmousemove = function () {
        eyeballs[i] .style.transform = "translate(" + x + "," + y + ")";
    }
 }
+document.getElementById("span1").innerHTML = Math.pow(44,2);
+document.getElementById("span2").innerHTML = Math.sqrt(40000);
+document.getElementById("span3").innerHTML = Math.floor(4.7);

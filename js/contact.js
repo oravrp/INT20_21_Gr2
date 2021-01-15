@@ -38,14 +38,6 @@
 			  emri.style.border = "1px solid red";
               messages.push("This field is required");
 		  }
-		else if (!allLetter(emri.value)) {
-			alert("Emri nuk eshte valid");
-			emriErr.innerText = "Invalid Name";
-			emriErr.style.color = "red";
-			emriErr.style.visibility = "visible";
-			emri.style.border = "1px solid red";
-			messages.push("This field is required");
-		  }
   		if (mail.value === '' || mail.value == null) {
 			  mailErr.style.visibility = "visible";
 			  mail.style.border = "1px solid red";
@@ -149,15 +141,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-function allLetter(name)
-      { 
-      var letters = /[a-z]/;
-      if(letters.test(name.value))
-      {
-      return true;
-      }
-      else
-      {
-      return false;
-      }
-      }
+function allLetter() {
+	var pattern = /[a-z]/;
+	try {
+		if(!emri.value.match(pattern));
+			throw("Name is not valid")
+	}
+	catch(err) {
+		alert(err);
+	}
+}
