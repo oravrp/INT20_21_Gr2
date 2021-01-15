@@ -18,39 +18,51 @@
     <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap " rel="stylesheet ">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap " rel="stylesheet " />
 
+    <script>
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+    </script>
 </head>
 
 <body>
     <header class="sticky">
-        <a class="logo " href="home.html ">
-            <img src="img/logo_airsense.png " style="width: 190px; height: 70px; position: relative; " alt="logo ">
+        <a class="logo" href="home.html">
+            <img src="img/logo_airsense.png" style="width: 190px; height: 70px; position: relative;" alt="logo">
         </a>
         <nav>
-            <ul class="nav__links ">
-                <li><a href="about.html ">About</a></li>
-                <div class="dropdown ">
-                    <li><a href="# ">Outputs</a><i class="fa fa-angle-down " aria-hidden="true "></i>
-                        <div class="dropdown-content ">
-                            <a href="outputs.html ">Output1</a>
-                            <a href="# ">Link 2</a>
-                            <a href="# ">Link 3</a>
+            <ul class="nav__links">
+                <div class="dropdown">
+                    <li><a href="about.html">About</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="dropdown-content">
+                            <a href="staff.html">Our Staff</a>
                         </div>
                     </li>
                 </div>
-                <div class="dropdown ">
-                    <li><a href="# ">Case Studies</a><i class="fa fa-angle-down " aria-hidden="true "></i>
-                        <div class="dropdown-content ">
-                            <a href="case.html ">Kosovo Case</a>
-                            <a href="# ">Link 2</a>
-                            <a href="# ">Link 3</a>
+                <div class="dropdown">
+                    <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="dropdown-content">
+                            <a href="outputs.html">Output 1</a>
+                            <a href="pacman.html">Game</a>
+                            <a href="Login.html">Login/SignUp</a>
                         </div>
                     </li>
                 </div>
-                <li><a href="newsnevents.html ">News & Events</a></li>
+                <div class="dropdown">
+                    <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="dropdown-content">
+                            <a href="case.html">Kosovo Case</a>
+                            <a href="feedback.html">feedback</a>
+                            <a href="flag.html">Svg</a>
+                        </div>
+                    </li>
+                </div>
+                <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
-        <a class="cta " href="contact.html ">Contact</a>
-        <p class="menu cta "><a href="home.html ">Home</a></p>
+        <a class="cta" href="contact.html">Contact</a>
+        <p class="menu cta"><a href="home.html">Home</a></p>
     </header>
 
     <div class="main__content ">
@@ -62,7 +74,7 @@
     </div>
 
 
-    <select class="select-css" id="selectBox" onchange="changeFunc(value);">
+    <select style="margin:15px auto" class="select-css" id="selectBox" onchange="changeFunc(value);">
         <option value="0">Show all</option>
         <option value="1">CEO-s</option>
         <option value="2">CTO-s</option>
@@ -75,7 +87,6 @@
 
 
     <script src="js/staff.js "></script>
-    <script src="js/homepage.js "></script>
     <footer id="footer" class="footer">
         <div class="container text-center">
             <address>Adresa:&nbsp;&nbsp;&nbsp;

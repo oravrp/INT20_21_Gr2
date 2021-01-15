@@ -206,6 +206,11 @@ span.fade {
     font-weight: normal;
 }
 
+.gallery .content a {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 @media (max-width:1017px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
