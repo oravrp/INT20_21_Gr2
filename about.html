@@ -206,7 +206,6 @@
     </a>
     </div>
     
-
     <div class = "gallery_column">
         <a target="_blank" href="img/19.jpg">
         <img src="img/19.jpg" alt="Architecture"  width = "600px" height = "192px" >
@@ -496,23 +495,25 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
     <h2>Use these inputs to give us ideas on what you want to see on this page in the future!</h2>
   </div>
 
+  <form id = "form">
    <div class = "input-">
   <div class="input-name">
     <br>
     <input type="text" name=""  id="name" placeholder="Name">
-    
+    <small id="nameErr">This field is required</small>
     </div>
 
     <div class="input-email">
     <input type="email" name=""  id="email" placeholder="Email">
-    
+    <small id="mailErr">This field is required</small>
   
     </div>
   
 </div> 
 
   <div class="addRemove">
-      <textarea type="text" id="inputAdd" placeholder="Write your ideas here..."></textarea>
+      <textarea type="text" id="inputAdd" placeholder="Write your ideas here..." style="background-color:white;"></textarea>
+      <small id="MessErr"></small>
   </div>
   
   <div class="addRemoveButtons">
@@ -523,6 +524,7 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
   </div>
 
 </div>
+</form>
   <!-- /Ideas -->
 
 
