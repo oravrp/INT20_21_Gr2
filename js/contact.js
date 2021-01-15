@@ -18,7 +18,6 @@
   	var subjErr = document.getElementById('subjErr');
 	var MessErr = document.getElementById('MessErr');
 	var radioErr = document .getElementById('radioErr');
-
   	form.addEventListener('submit', (e) =>{
   		let messages = []
   		if (emri.value === '' || emri.value == null){
@@ -31,12 +30,12 @@
 			emriErr.style.visibility = "hidden";
 			emri.style.border = "1px solid green";
 		} 
-  		else if (!isNaN(emri.value)) {
-              emriErr.innerText = "You can not put numbers in this field";
-              emriErr.style.color = "red";
-			  emriErr.style.visibility = "visible";
-			  emri.style.border = "1px solid red";
-              messages.push("This field is required");
+		else if (isName(emri.value)) {
+			emriErr.innerText = "Invalid Name";
+			emriErr.style.color = "red";
+			emriErr.style.visibility = "visible";
+			emri.style.border = "1px solid red";
+			messages.push("This field is required");
 		  }
   		if (mail.value === '' || mail.value == null) {
 			  mailErr.style.visibility = "visible";
@@ -47,13 +46,7 @@
 			mailErr.style.visibility = "hidden";
 			mail.style.border = "1px solid green";
 		}  
-  		 else if (!ValidateEmail(mail.value)) {
-              mailErr.innerText = "This email is invalid";
-              mailErr.style.color = "red";
-			  mailErr.style.visibility = "visible";
-			  mail.style.border = "1px solid green";
-              messages.push("This field is required");
-          }
+
   		if (Subject.value === '' || Subject.value == null) {
 			  subjErr.style.visibility = "visible";
 			  Subject.style.border = "1px solid red";
@@ -86,7 +79,7 @@
   		  e.preventDefault();
 		  }
 		  if (messages.length == 0 ) {
-			 alert("Thank you for your message, we try to be better every day !");
+			 window.alert("Thank you "+ emri.value + " for your message, we try to be better every day !");
 		  } 
 	  })
 
@@ -143,11 +136,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 function allLetter() {
 	var pattern = /[a-z]/;
-	try {
-		if(!emri.value.match(pattern));
-			throw("Name is not valid")
+	if(!pattern.test(emri.value)) {
+		alert("Invalid name");
 	}
-	catch(err) {
-		alert(err);
-	}
+};
+function isName (name) {
+	return /[^a-zA-Z]$/.test(name);
 }
