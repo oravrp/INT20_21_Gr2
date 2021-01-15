@@ -57,9 +57,8 @@ function displayMenuItems(item) {
         return `<div class="content content${menuItem.id}" >
     <img src="./${menuItem.img}" alt="Staff image">
     <h1>${menuItem.header}</h1>
-    
     <p>${menuItem.text}</p>
-    <a href="https://twitter.com/?lang=en" target="_blank">${menuItem.contact}</a>
+    <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i>${menuItem.contact}</a>
 </div>`;
 
     });
