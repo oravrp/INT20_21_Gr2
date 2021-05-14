@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -101,28 +102,28 @@
             </div>
             <!--****************************Form Section ***********************************-->
             <div class="form">
-                <form id="form">
+                <form id="form" method="POST" action="mail.php">
                     <div class="input1">
                         <div class="input">
                         <br>
-                        <input type="text" name=""  id="name" placeholder="Name">
+                        <input type="text" name="name"  id="name" placeholder="Name">
                         <small id="nameErr">This field is required</small>
                         </div>
                         <div class="input" id="id1">
-                        <input style="margin-left: 13px; margin-top: 24px;" type="email" name=""  id="email" placeholder="Email">
+                        <input style="margin-left: 13px; margin-top: 24px;" type="email" name="email"  id="email" placeholder="Email">
                         <small id="mailErr">This field is required</small>
                         </div>
                     </div>
                     <div class="input">
-                        <input style = "width: 635px;" type="text" name="" placeholder="Subject" id="Subject">
+                        <input style = "width: 635px;" type="text" name="subject" placeholder="Subject" id="Subject">
                         <small id="subjErr">This field is required</small>
                     </div>
                     <div class="input">
-                        <textarea id="textarea" placeholder="Message"></textarea>
+                        <textarea id="textarea" placeholder="Message" name="message"></textarea>
                         <small id="MessErr">This field is required</small>
                     </div>
                     <div class="input">    
-                        <input type="submit" name="" required="required" value="Submit" class="getValues">
+                        <input type="submit" name="submit" required="required" value="Submit" class="getValues">
                     </div>
                 </form>
             </div>
