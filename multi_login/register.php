@@ -16,7 +16,7 @@
     <body>
 
     <header class="sticky">
-        <a class="logo" href="home.html">
+        <a class="logo" href="../home.html">
             <img src="../img/logo_airsense.png" style="width: 190px; height: 70px; position: relative;" alt="logo">
         </a>
         <nav>
@@ -30,26 +30,26 @@
                 <div class="dropdown">
                     <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
-                            <a href="outputs.html">Output 1</a>
-                            <a href="pacman.html">Game</a>
-                            <a href="Login.html">Login/SignUp</a>
+                            <a href="../outputs.html">Output 1</a>
+                            <a href="../pacman.html">Game</a>
+                            <a href="../Login.html">Login/SignUp</a>
                         </div>
                     </li>
                 </div>
                 <div class="dropdown">
                     <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
-                            <a href="case.html">Kosovo Case</a>
-                            <a href="feedback.html">feedback</a>
-                            <a href="flag.html">svg</a>
+                            <a href="../case.html">Kosovo Case</a>
+                            <a href="../feedback.html">feedback</a>
+                            <a href="../flag.html">svg</a>
                         </div>
                     </li>
                 </div>
                 <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
-        <a class="cta" href="contact.html">Contact</a>
-        <p class="menu cta"><a href="home.html">Home</a></p>
+        <a class="cta" href="../contact.html">Contact</a>
+        <p class="menu cta"><a href="../home.html">Home</a></p>
     </header>
     <div id="bd">
 	<div class="container" id="container">
