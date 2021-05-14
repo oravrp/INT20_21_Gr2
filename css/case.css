@@ -328,37 +328,6 @@ article .analysis p{
     padding: 8px 21px;
     margin-left: 26.5%;
 }
-/* DRAG and DROP EFFECT */
-.fill {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEsMDkep0Fw-Q5izfoGTgFmo68GYLYiImdLQ&usqp=CAU);
-  height: 156px;
-  width: 156px;
-  cursor: pointer;
-}
-
-.hold {
-  border: solid 5px #ccc;
-}
-
-.empty {
-  display: inline-block;
-  height: 160px;
-  width: 160px;
-  margin: 10px;
-  border: solid 3px salmon;
-  background: white;
-}
-
-.hovered {
-  background: #f4f4f4;
-  border-style: dashed;
-}
-.dragDrop{
-  text-align: center;
-}
-#other{
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvpAAFoQYZxnBBUml3-9o9ykqWxLJpgOQZng&usqp=CAU);
-}
 /*------------------ Footer ------------------*/
 .footer {
     padding: 60px 0 20px;

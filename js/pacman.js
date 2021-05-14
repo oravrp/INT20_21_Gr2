@@ -69,11 +69,11 @@ document.onkeydown = function(e){
         document.getElementById('pacman').style.transform = "rotate(-180deg)";
         pacman.x = world[0].length-1;
     }
-    else if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2 && pacman.x > 0){
+    else if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2 && pacman.x > 0){ //left arrow
         document.getElementById('pacman').style.transform = "rotate(-180deg)";
         pacman.x--;
     }
-    else if(e.keyCode == 39 && world[pacman.y][pacman.x+1] != 2 && pacman.x == world[0].length-1){
+    else if(e.keyCode == 39 && world[pacman.y][pacman.x+1] != 2 && pacman.x == world[0].length-1){ //right arrow
         document.getElementById('pacman').style.transform = "none";
         pacman.x = 0;
     }
@@ -85,7 +85,7 @@ document.onkeydown = function(e){
         document.getElementById('pacman').style.transform = "rotate(-90deg)";
         pacman.y--;
     }
-    else if(e.keyCode == 40 && world[pacman.y+1][pacman.x] != 2){
+    else if(e.keyCode == 40 && world[pacman.y+1][pacman.x] != 2){ //down arrow
         document.getElementById('pacman').style.transform = "rotate(90deg)";
         pacman.y++;
     }
