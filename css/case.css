@@ -374,5 +374,38 @@ article .analysis p{
     padding: 40px 0 0;
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
-  
- 
+#weather{
+  width: 285px;
+    margin: 0 auto;
+    text-align: center;
+}
+#weather form input[type="text"]{
+  margin: 5px 0;
+  width: 310.5px;
+  color: rgb(73, 80, 87);
+  border: 2px solid #e0dede;
+  outline: none;
+  padding: 0.385rem 0.75rem;
+  background-color: inherit;
+  height: 44px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+#weather form input[type="submit"]{
+    width: 89px;
+    background-color: none;
+    border: 2px solid #4995A3;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #4995A3;
+    margin-left: 26px;
+    height: 35px;
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+#weather #results{
+  padding:20px;
+  color: #f5d088;
+}

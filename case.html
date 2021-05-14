@@ -12,14 +12,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&amp;display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         $(function(){
+            $('form').submit(function(){
+            var api_key = '38ed520286ab541243ddee4e7fe64fab';
+            var city = $('input#city').val();
+            $.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${api_key}`, function(res){
+                // api.openweathermap.org/data/2.5/weather?q={city name}&appid=
+                console.log(res)
+                var html = '';
+                html += `<p> ${res['name']}: ${res['weather'][0]['description']} </p>`;
+                html += `<p> Temperature:${res['main']['temp']} F</p>`;
+                html += `<p> Coord: ${res['coord'].lat}, ${res['coord'].lon}`
+                $('#results').html(html);
+            }, 'jsonp');
+            return false;
+            });
             $('figcaption').hide();
             $('figure').hover(function(){
                 $('figcaption').toggle();
-            });
-            $('#other').click(function(){
-                alert('You can drag and drop the first image!');
             });
             $('.fourth').hide();
             $('#map').click(function(){
@@ -384,7 +396,17 @@
             </table>
         </div>
     </article>
-      <br><br>
+    <br><br>
+    <div id="weather">
+        <form>
+            <label for='city' style="margin-left: 18px;">City:
+                <input type='text' name='city' id='city'/>
+            </label>
+            <input type='submit' name='submit'/>
+        </form>
+        <div id="results"></div>
+    </div>
+    <br><br>
     <!--Footer-->
     <footer id="footer" class="footer">
         <div class="container text-center">
