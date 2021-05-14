@@ -343,7 +343,17 @@ button.ghost {
  .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
-
+.error {
+    width: 97%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 2px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+  }
 /* ----------------- Footer ---------------------- */
 .footer {
     padding: 60px 0 20px;
