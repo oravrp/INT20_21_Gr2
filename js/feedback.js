@@ -30,35 +30,35 @@ function showReason(n) {
 /*  ---------------------------------------------------------------  */
 
 /* FORM VALIDATION */
-function isBlank(inputField) {
-    if (inputField.value == "") {
-        return true;
-    }
-    return false;
-}
+// function isBlank(inputField) {
+//     if (inputField.value == "") {
+//         return true;
+//     }
+//     return false;
+// }
 
 function removeErrors(element) {
     element.classList.remove("error");
 }
 
-function validate() {
-    var proceed = true;
+ function validate() {
+   var proceed = true;
 
-    var requiredInputs = document.getElementsByClassName("required");
-    for (i = 0; i < requiredInputs.length; i++) {
-        if (isBlank(requiredInputs[i])) {
+//     var requiredInputs = document.getElementsByClassName("required");
+//     for (i = 0; i < requiredInputs.length; i++) {
+//         if (isBlank(requiredInputs[i])) {
 
-            requiredInputs[i].classList.add("error");
-            proceed = false;
-        }
+//             requiredInputs[i].classList.add("error");
+//             proceed = false;
+//         }
 
-        else {
-            if (requiredInputs[i].id == "selectContinent") {
-                if (requiredInputs[i].value == 0) { requiredInputs[i].classList.add("error"); proceed = false; continue; }
-            }
-            removeErrors(requiredInputs[i]);
-        }
-    }
+//         else {
+//             if (requiredInputs[i].id == "selectContinent") {
+//                 if (requiredInputs[i].value == 0) { requiredInputs[i].classList.add("error"); proceed = false; continue; }
+//             }
+//             removeErrors(requiredInputs[i]);
+//         }
+//     }
     var givenDate = document.getElementById("date");
     var currentDate = new Date().getTime();
     var date = new Date(givenDate.value + ' 00:00').getTime();
@@ -67,10 +67,10 @@ function validate() {
         window.alert("Date is invalid. Please insert an older date to proceed"); proceed = false; givenDate.classList.add("error");
     }
     else { removeErrors(givenDate); }
-    var x = document.getElementById("telephone");
+    //var x = document.getElementById("telephone");
 
-    if (!isBlank(x)) { if (!correctFormat()) { proceed = false; x.classList.add("error"); window.alert("Please follow the correct format of the telephone element") } else { removeErrors(x); } }
-    else { removeErrors(x); }
+    //if (!isBlank(x)) { if (!correctFormat()) { proceed = false; x.classList.add("error"); window.alert("Please follow the correct format of the telephone element") } else { removeErrors(x); } }
+    //else { removeErrors(x); }
 
     return proceed;
 }

@@ -156,24 +156,24 @@
                             <a href="staff.html">Our Staff</a>
                         </div></li>
                     </div>
-                    <div class="dropdown">
-                        <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="dropdown-content">
-                                <a href="outputs.html">Output 1</a>
-                                <a href="multi_login/login.php">Login</a>
-                                <a href="multi_login/register.php">SignUp</a>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="dropdown">
-                        <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
-                            <div class="dropdown-content">
-                                <a href="case.html">Kosovo Case</a>
-                                <a href="feedback.html">feedback</a>
-                                <a href="pacman.html">Game</a>
-                            </div>
-                        </li>
-                    </div>
+                <div class="dropdown">
+                    <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="dropdown-content">
+                            <a href="outputs.html">Output1</a>
+                            <a href="pacman.html">Game</a>
+                            <a href="Login.html">Login/SignUp</a>
+                        </div>
+                    </li>
+                </div>
+                <div class="dropdown">
+                    <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="dropdown-content">
+                            <a href="case.html">Kosovo Case</a>
+                            <a href="feedback.html">Feedback</a>
+                            <a href="flag.html">Svg</a>
+                        </div>
+                    </li>
+                </div>
                 <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
@@ -200,7 +200,7 @@
     <!--/ Banner-->
     <main>
         <div onload="doShowAll()">
-            <form action="#labyrinth" method="get" name="form" id="feedback"
+            <form action="feedback.php"  method="POST" name="form" id="feedback"
                 oninput="x.value=parseInt(number.value)+'%'" onsubmit="return validate()">
                 <fieldset style="padding-left: 50px;">
                     <legend>
@@ -214,7 +214,7 @@
                                         <div class="label">
                                             <p><b>Name </b> (Required)</p>
                                         </div>
-                                        <input type="text" name=name1 class="text required highlightable"
+                                        <input type="text" name="name" class="text required highlightable"
                                             placeholder="Type your first name here..." autocomplete="on" />
                                     </div>
                                 </td>
@@ -223,7 +223,7 @@
                                         <div class="label">
                                             <p><b>Surname </b> (Required)</p>
                                         </div>
-                                        <input type="text" name="name" class="text required highlightable"
+                                        <input type="text" name="surname" class="text required highlightable"
                                             placeholder="Type your last name here..." autocomplete="on" />
                                     </div>
                                 </td>
@@ -236,7 +236,7 @@
                                                     had a Kosovan number</span></p>
 
                                         </div>
-                                        <input type="tel" name="name" class="text highlightable"
+                                        <input type="text" name="phone" class="text highlightable"
                                             placeholder="(383) 78 123456" id="telephone" />
                                         <p id="splitTel"></p>
                                     </div>
@@ -246,7 +246,7 @@
                                         <div class="label">
                                             <p><b>Date of Birth </b> (optional)</p>
                                         </div>
-                                        <input type="date" name="name" class="text highlightable"
+                                        <input type="date" name="birthdate" class="text highlightable"
                                             placeholder="Type your last name here..." id="date" />
                                         <!--max date-->
                                     </div>
@@ -600,7 +600,8 @@
                     <textarea name="comment" class="textarea text" rows="5"></textarea>
                 </div>
                 <div>
-                    <input type="submit" formtarget="_blank" value="SUBMIT" id="submitFeedback"><br><br>
+                    <input type="submit" formtarget="_blank" value="SUBMIT" id="submitFeedback" name="submit"
+                    onclick="clearInputs()"><br><br>
                     <input type="reset" value="RESET" onclick="drawBarriers()">
                 </div>
             </td>
@@ -612,13 +613,7 @@
 
         </form>
         </div>
-        <div class="testimonials">
-            <h2 style="margin-bottom: 5%; border-bottom: 3px solid #14293c;">Testimonials</h2>
-            <h4 id="emri"></h4>
-            <p id="com"></p>
-            <p id="nat"></p>
-        </div>
-        <script>
+        <!-- <script>
             function Person(first, last, age, comment) {
                 this.name = first;
                 this.surname = last;
@@ -635,7 +630,7 @@
             document.getElementById('com').innerHTML = person['comment']
             document.getElementById('emri').innerHTML = person.fname()
             document.getElementById('nat').innerHTML = person['nationality']
-        </script>
+        </script> -->
     </main>
     <!--Footer-->
     <footer id="footer" class="footer">
@@ -657,6 +652,15 @@
   <!--/ Footer-->
 
     <script>
+        function clearInput() {
+        var btn = document.getElementById('submitFeedback');
+        var inputs = document.querySelectorAll('input');
+        btn.addEventListener('click', () => {
+            inputs.forEach(input => input.value = '');
+        })
+    }
+
+
         function isBlank(inputField) {
             if (inputField.value == "") {
                 return true;
