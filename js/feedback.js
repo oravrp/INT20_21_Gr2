@@ -75,30 +75,27 @@ function validate() {
     return proceed;
 }
 
-function correctFormat() {
-    var answer = true;
+// function correctFormat() {
+//     var answer = true;
 
-    var tokens = document.getElementById("telephone").value.split(" ");
-    if (tokens[0].length != 5 || tokens[0][0] != '(' || tokens[0][4] != ')') { return false; }
-    if (tokens[1].length != 2) { return false; }
-    if (tokens[2].length != 6) { return false; }
-    var code = 383; var typedCode;
+//     var tokens = document.getElementById("telephone").value.split(" ");
+//     if (tokens[0].length != 5 || tokens[0][0] != '(' || tokens[0][4] != ')') { return false; }
+//     if (tokens[1].length != 2) { return false; }
+//     if (tokens[2].length != 6) { return false; }
+//     var code = 383; var typedCode;
 
-    try { typedCode = parseInt(tokens[0].substring(1, 5)); if (code != typedCode) { answer = false; } }
-    catch (e) { answer = false; }
-
-
-    try { typedCode = parseInt(tokens[1] + ""); }
-    catch (e) { answer = false; }
-
-    try { typedCode = parseInt(tokens[2]); }
-    catch (e) { answer = false; }
-
-    return answer;
+//     try { typedCode = parseInt(tokens[0].substring(1, 5)); if (code != typedCode) { answer = false; } }
+//     catch (e) { answer = false; }
 
 
+//     try { typedCode = parseInt(tokens[1] + ""); }
+//     catch (e) { answer = false; }
 
-}
+//     try { typedCode = parseInt(tokens[2]); }
+//     catch (e) { answer = false; }
+
+//     return answer;
+// }
 
 window.addEventListener("load", function () {
 
