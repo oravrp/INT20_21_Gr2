@@ -1,5 +1,7 @@
 <?php 
+include 'db-conf.php';
 require 'vendor/autoload.php';
+//---------------------------Send a mail to website email and a no reply to user -----------------
 $name = '';
 $emailFrom = '';
 $subject = '';
@@ -44,4 +46,20 @@ else {
      echo 'Email sending failed :( Please try again';
  }
 
+//----------------------------------Secure Contact inputs from SQL Injection ---------------------------------
+if(isset($_POST['submit'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $emailFrom = mysqli_real_escape_string($conn, $_POST['email']);
+    $subject = mysqli_real_escape_string($conn, $_POST['subject']);
+}
+    $sql = "INSERT INTO contactRegister (name, email, subjekti) values (?, ?, ?);";
+    $statement = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($statement, $sql)) {
+        echo "Sql error. Something failed <br>";
+        echo "<br>". mysqli_error($conn);
+    }else {
+        mysqli_stmt_bind_param($statement, "sss", $name, $emailFrom, $subject);
+        mysqli_stmt_execute($statement);
+        echo "Te dhenat u insertuan <br>";
+    }
 ?>
