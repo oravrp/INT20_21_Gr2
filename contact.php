@@ -49,7 +49,7 @@
                     <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
                             <a href="case.html">Kosovo Case</a>
-                            <a href="feedback.html">feedback</a>
+                            <a href="feedback.php">feedback</a>
                             <a href="flag.html">Svg</a>
                         </div>
                     </li>
