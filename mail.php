@@ -1,5 +1,5 @@
 <?php 
-include 'db-conf.php';
+include 'dbconfig.php';
 require 'vendor/autoload.php';
 //---------------------------Send a mail to website email and a no reply to user -----------------
 $name = '';
@@ -20,7 +20,7 @@ $emailTo = 'helpairsense@gmail.com';
 $body = ' You have recieved a new email from : '. $name . "\n". ' Email :  ' . 
 $emailFrom . "\n\n". ' Message : ' .$message ;
 if(mail($emailTo, $subject, $body)) {
-     echo "Email sent succesfully. We will be in touch";
+     echo "<h4 style = 'text-align: center;'>Email sent succesfully. We will be in touch </h4>";
      try {
         $mail = new PHPMailer();
         $mail -> isSMTP();
@@ -43,7 +43,7 @@ if(mail($emailTo, $subject, $body)) {
      }
     }
 else {
-     echo 'Email sending failed :( Please try again';
+     echo "<h4 style = 'text-align: center'>Email sending failed :(. Please try again <br></h4>";
  }
 
 //----------------------------------Secure Contact inputs from SQL Injection ---------------------------------
@@ -60,6 +60,5 @@ if(isset($_POST['submit'])) {
     }else {
         mysqli_stmt_bind_param($statement, "sss", $name, $emailFrom, $subject);
         mysqli_stmt_execute($statement);
-        echo "Te dhenat u insertuan <br>";
     }
 ?>

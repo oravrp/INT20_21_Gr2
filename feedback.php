@@ -174,7 +174,7 @@
                     <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
                             <a href="case.html">Kosovo Case</a>
-                            <a href="feedback.html">Feedback</a>
+                            <a href="feedback.php">Feedback</a>
                             <a href="flag.html">Svg</a>
                         </div>
                     </li>
@@ -182,7 +182,7 @@
                 <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
-        <a class="cta" href="contact.html">Contact</a>
+        <a class="cta" href="contact.php">Contact</a>
         <p class="menu cta"><a href="home.html">Home</a></p>
     </header>
     <!--Banner-->

@@ -102,7 +102,7 @@
             </div>
             <!--****************************Form Section ***********************************-->
             <div class="form">
-                <form id="form" method="POST" action="mail.php">
+                <form id="form" method="POST" action="">
                     <div class="input1">
                         <div class="input">
                         <br>
@@ -129,6 +129,11 @@
             </div>
             </div>
             </section>
+            <?php
+            if(isset($_POST['submit'])) { 
+            include "mail.php";
+            }
+            ?>
     </div>
     <!--************************** Footer *********************-->
     <footer id="footer" class="footer">
@@ -149,6 +154,11 @@
         </div>
     </footer>
   <script src="js/contact.js"></script>
+  <script>
+  <?php 
+  include "js/contact.js";
+  ?>
+  </script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPvs2MZNfRqUqOcLPsSo6f1GXOGv9MW7M&callback=initMap">
     </script>

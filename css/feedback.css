@@ -90,10 +90,10 @@ table{
 }
 
 td{
-    /* padding-top: 30px;
+    padding-top: 30px;
     border-bottom: 1px solid #4995A3;;
     padding-bottom: 30px;
-    width: 50%; */
+    width: 50%;
 }
 #items_table h3{
     text-align: center;
@@ -171,7 +171,7 @@ tfoot div{
     text-align: center;
     display:block;
     margin:7% 0 3% 27%;
-    /* vertical-align: middle; */
+     vertical-align: middle; 
     border: 2px solid #14293c;
 }
 
@@ -180,11 +180,11 @@ fieldset{
 }
 
 span{
-    /* -webkit-transform:  */
-    /* -moz-transform: 
-    -ms-transform:  */
-    /* -o-transform: 
-    transform:  */
+     -webkit-transform:
+     -moz-transform: 
+    -ms-transform:  
+     -o-transform: 
+    transform:  
 }
 
 #smileFace{
