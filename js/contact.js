@@ -79,7 +79,7 @@
   		  e.preventDefault();
 		  }
 		  if (messages.length == 0 ) {
-			 window.alert("Thank you "+ emri.value + " for your message, we try to be better every day !. We recieved your email and we will be in touch.");
+			 window.alert("Thank you "+ emri.value + " for your message, we try to be better every day !");
 		  } 
 	  })
 

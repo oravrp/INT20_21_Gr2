@@ -102,7 +102,7 @@
             </div>
             <!--****************************Form Section ***********************************-->
             <div class="form">
-                <form id="form" method="POST" action="">
+                <form id="form" method="POST" action="mail.php">
                     <div class="input1">
                         <div class="input">
                         <br>
@@ -129,11 +129,6 @@
             </div>
             </div>
             </section>
-            <?php 
-            if(isset($_POST['submit'])) {
-            require "mail.php";
-            }
-            ?>
     </div>
     <!--************************** Footer *********************-->
     <footer id="footer" class="footer">
@@ -156,11 +151,6 @@
   <script src="js/contact.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPvs2MZNfRqUqOcLPsSo6f1GXOGv9MW7M&callback=initMap">
-    </script>
-    <script>
-    <?php 
-    include "js/contact.js";
-    ?>
     </script>
 </body>
 </html>

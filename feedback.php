@@ -618,6 +618,24 @@
 
         </form>
         </div>
+        <!-- <script>
+            function Person(first, last, age, comment) {
+                this.name = first;
+                this.surname = last;
+                this.age = age;
+                this.comment = comment;
+            }
+            Person.prototype.nationality = 'English'
+
+            Person.prototype.fname = function () {
+                return this.name + " " + this.surname;
+            };
+
+            var person = new Person('Don', 'Ahmeti', 25, 'A really amazing and useful website!')
+            document.getElementById('com').innerHTML = person['comment']
+            document.getElementById('emri').innerHTML = person.fname()
+            document.getElementById('nat').innerHTML = person['nationality']
+        </script> -->
     </main>
     <?php
     if (isset($_POST['submit'])) {
