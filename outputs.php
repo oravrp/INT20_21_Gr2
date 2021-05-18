@@ -103,12 +103,18 @@
     <div class="description2">
         <div class="text">
             <h3>
-               Our Motto : Protect the health of people
+                <?php
+                $arr = array('Our','Motto!',':','Protect','the','health','of','people');
+                echo implode(" ",$arr);
+                ?>
             </h3>
         </div>
         <div class = "info">
-            <p>We have a continuous air quality monitoring station in Irvine which is serviced and maintained by Air Monitors, 
-                delivering extremely high levels of data capture. Since <span id="span1"></span> it has also included a FIDAS <span id="span2"></span> particulate monitor, 
+            <p><?php
+                $number = 1936;
+                printf("We have a continuous air quality monitoring station in Irvine which is serviced and maintained by Air Monitors, delivering extremely high levels of data capture. Since %d.",$number);
+                ?>
+                 it has also included a FIDAS <span id="span2"></span> particulate monitor, 
                 so we are now able to monitor TSP, PM10, PM4, PM2.5, PM1 and Particle Number simultaneously, which provides greater insight into the types of pollution and their likely sources. To complement the AQMS we also operate <span id="span3"></span> AQMesh pods which provide the flexibility we need to monitor air quality in precisely the location of greatest importance.
                 Web connectivity combined with Air Monitors’ reliability of service provides us with continuous access to accurate air quality data, which means that we are able to fulfil our statutory obligations as a Council, and also find ways to protect the health of people in North Ayrshire.</p>
         </div>
@@ -195,41 +201,38 @@
                   <th>2000 vs 2019</th>
                   <th>2010 vs 2019</th>
               </tr>
-              <tr>
-                  <td>Crbon Monoxide</td>
-                  <td>-85</td>
-                  <td>-78</td>
-                  <td>-65</td>
-                  <td>-23</td>
-              </tr>
-              <tr>
-                  <td>Lead</td>
-                  <td>-98</td>
-                  <td>-98</td>
-                  <td>-93</td>
-                  <td>-95</td>
-              </tr>
-              <tr>
-                  <td>Sulfur Dioxide</td>
-                  <td>-93</td>
-                  <td>-95</td>
-                  <td>-78</td>
-                  <td>-60</td>
-              </tr>
-              <tr>
-                  <td>Ozone</td>
-                  <td>-35</td>
-                  <td>-25</td>
-                  <td>-21</td>
-                  <td>-10</td>
-              </tr>
-              <tr>
-                  <td>Nitrogen Dioxide</td>
-                  <td>-62</td>
-                  <td>-51</td>
-                  <td>-36</td>
-                  <td>-17</td>
-              </tr>
+              
+              <?php
+
+               $elem = array (
+                array("Carbon monoxide",-85,-78,-65,-23),
+                array("Lead",-98,-98,-93,-95),
+                array("Sulfur Dioxide",-93,-95,-78,-60),
+                array("Ozone",-35,-25,-21,-10),
+                array("Nitrogen Dioxide",-62,-51,-36,-17)
+                );
+                
+
+                echo "<tr>";
+                        echo "<td>".$elem[0][0]."</td>"."<td>".$elem[0][1]."</td>"."<td>".$elem[0][2]."</td>"."<td>".$elem[0][3]."</td>"."<td>".$elem[0][4]."</td>"."<br>";
+                echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>".$elem[1][0]."</td>"." "."<td>".$elem[1][1]."</td>"." "."<td>".$elem[1][2]."</td>"." "."<td>".$elem[1][3]."</td>"." "."<td>".$elem[1][4]."</td>".".<br>";
+                    echo"</tr>";
+
+                    echo "<tr>";
+                    echo "<td>".$elem[2][0]."</td>"." "."<td>".$elem[2][1]."</td>"." "."<td>".$elem[2][2]."</td>"." "."<td>".$elem[2][3]."</td>"." "."<td>".$elem[2][4]."</td>".".<br>";
+                    echo"</tr>";
+
+                    echo "<tr>";
+                    echo "<td>".$elem[3][0]."</td>"." "."<td>".$elem[3][1]."</td>"." "."<td>".$elem[3][2]."</td>"." "."<td>".$elem[3][3]."</td>"." "."<td>".$elem[3][4]."</td>".".<br>";
+                    echo"</tr>";
+
+                    echo "<tr>";
+                    echo "<td>".$elem[4][0]."</td>"." "."<td>".$elem[4][1]."</td>"." "."<td>".$elem[4][2]."</td>"." "."<td>".$elem[4][3]."</td>"." "."<td>".$elem[4][4]."</td>".".<br>";
+                    echo"</tr>";
+                  
+              ?>
           </table>
       </div>
       <div class="dl-text">
@@ -237,14 +240,34 @@
       </div>
       <div class="dl">
           <dl>
-              <dt>Carbon Monoxide</dt>
-              <dd>Highly toxic gas that is produced industrially</dd>
-              <dt>Lead</dt>
-              <dd>Metal that is highly poisonous for every organ in our body</dd>
-              <dt>Sulfur Dioxide</dt>
-              <dd>Colorless gas in the air that is very harmful for our resporatory tract</dd>
-              <dt>Nitrogen Dioxide</dt>
-              <dd>Gas in the air that can cause a range of harmful attacks</dd>
+          <?php
+                $disc = array("Carbon Monoxide"=>"Highly toxic gas that is produced industrially",
+                "Lead"=>"Metal that is highly poisonous for every organ in our body",
+                "Sulfur Dioxide"=>"Colorless gas in the air that is very harmful for our resporatory tract",
+                "Nitrogen Dioxide"=>"Gas in the air that can cause a range of harmful attacks");
+
+                echo "<dt>Carbon Monoxide</dt>" ;
+                echo "<br>";
+                echo  "<dd>".$disc['Carbon Monoxide']."</dd>" ;
+                echo "<br>";
+
+                echo "<dt>Lead</dt>" ;
+                echo "<br>";
+                echo  "<dd>".$disc['Lead']."</dd>" ;
+                echo "<br>";
+
+                echo "<dt>Sulfur Dioxide</dt>" ;
+                echo "<br>";
+                echo  "<dd>".$disc['Sulfur Dioxide']."</dd>" ;
+                echo "<br>";
+
+                echo "<dt>Nitrogen Dioxide</dt>" ;
+                echo "<br>";
+                echo  "<dd>".$disc['Nitrogen Dioxide']."</dd>" ;
+                echo "<br>";
+
+                ?>
+              
           </dl>
       </div>
       <div class="covid-text">
