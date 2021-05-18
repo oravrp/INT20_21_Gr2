@@ -9,6 +9,7 @@
     6. Video Slider
     7. Canvas Image
     8. Ideas
+    9. Files
 */
 
 
@@ -713,3 +714,27 @@ transform:translateY(-5px);
   margin-top: 50px;
 }
 
+
+
+/*---------- 9. FILES ---------- */
+
+
+.read-file{
+  width:100%;
+  height:100px;
+ 
+}
+
+#bt{
+  border-radius: 50px;
+  text-align: center;
+  font-size:16px;
+  font-family: 'poppins';
+  cursor:pointer;
+  padding: 9px 25px;
+  border: 3px solid whitesmoke;
+  transition: all 0.3s ease 0s;
+  margin-left: 40%;
+  letter-spacing: 1px;
+  
+}
