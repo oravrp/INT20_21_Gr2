@@ -162,29 +162,57 @@
       <div class="lists">
           <ol>
               <li><span style="font-weight: bold;">Passive Monotoring</span>
-                  <ul class="a">
-                      <li>Diffusion tubes absorb a specific pollutant from the ambient air</li>
-                      <li>Diffusion tubes normally monitor for 2-4 weeks at a time</li>
-                      <li>The tubes must be sent to a laboratory for analysis to see how much pollution they have detected</li>
+              <ul class="a">
+                         <?php
+                            $str = "Diffusion tubes absorb a specific pollutant from the ambient air&
+                            Diffusion tubes normally monitor for 2-4 weeks at a time@
+                            The tubes must be sent to a laboratory for analysis to see how much pollution they have detected";
+                            $pattern = "/[&@]/";
+                            $string = preg_split($pattern, $str);
+                            foreach($string as $x){
+                            echo "<li>$x</li>";
+                            }
+                         ?>
                   </ul>
                   </li>
                   <li><span style="font-weight: bold;">Active (Semi Automatic) Sampling</span>
                     <ul class="b">
-                        <li>An analyser pulls the ambient air through a filter for a set period of time e.g  one filter per day</li>
-                        <li>The filters are then collected and sent to a laboratory for analysis to see how much pollution they have detected</li>
+                    <?php
+                            $str = "An analyser pulls the ambient air through a filter for a set period of time e.g  one filter per day&
+                            The filters are then collected and sent to a laboratory for analysis to see how much pollution they have detected";
+                            $pattern = "/[&@]/";
+                            $string = preg_split($pattern, $str);
+                            foreach($string as $x){
+                            echo "<li>$x</li>";
+                            }
+                         ?>
                     </ul>
                   </li>
                   <li> <span style="font-weight: bold;">Automatic point monitoring</span>
                       <ul class="c">
-                          <li>Ambient air is pulled through an analyser which recognises the chosen gas and will calculate its concentration</li>
-                          <li>Automatic sites monitor pollutants 24hours a day</li>
-                          <li>Data is sent from the site directly to your computer which means it can be seen instantly</li>
+                      <?php
+                            $str = "Ambient air is pulled through an analyser which recognises the chosen gas and will calculate its concentration&
+                            Automatic sites monitor pollutants 24hours a day&
+                            Data is sent from the site directly to your computer which means it can be seen instantly";
+                            $pattern = "/[&@]/";
+                            $string = preg_split($pattern, $str);
+                            foreach($string as $x){
+                            echo "<li>$x</li>";
+                            }
+                         ?>
                         </ul>
                   </li>
                   <li><span style="font-weight: bold;">Photochemical and optical sensor systems</span>
                       <ul class = "d">
-                          <li>These are portable monitoring tools that can continuously monitor a range of pollutants.</li>
-                          <li>Data can be downloaded to your computer and analysed.</li>
+                      <?php
+                            $str = "These are portable monitoring tools that can continuously monitor a range of pollutants.&
+                            Data can be downloaded to your computer and analysed.";
+                            $pattern = "/[&@]/";
+                            $string = preg_split($pattern, $str);
+                            foreach($string as $x){
+                            echo "<li>$x</li>";
+                            }
+                         ?>
                       </ul> 
                   </li>
              </ol>
@@ -195,11 +223,15 @@
       <div class="table">
           <table cellspacing = "5">
               <tr>
-                  <th>Variable</th>
-                  <th>1980 vs 2019</th>
-                  <th>1990 vs 2019</th>
-                  <th>2000 vs 2019</th>
-                  <th>2010 vs 2019</th>
+              <th>Variable</th>
+                <?php
+                $year = array(1980, 2000, 2010, 1990);
+                sort($year);
+
+                foreach($year as $x) {
+                                echo  "<th>$x vs 2019</th>";
+                                }
+                ?>
               </tr>
               
               <?php
@@ -241,30 +273,18 @@
       <div class="dl">
           <dl>
           <?php
-                $disc = array("Carbon Monoxide"=>"Highly toxic gas that is produced industrially",
-                "Lead"=>"Metal that is highly poisonous for every organ in our body",
+                $disc = array("Lead"=>"Metal that is highly poisonous for every organ in our body",
                 "Sulfur Dioxide"=>"Colorless gas in the air that is very harmful for our resporatory tract",
-                "Nitrogen Dioxide"=>"Gas in the air that can cause a range of harmful attacks");
+                "Nitrogen Dioxide"=>"Gas in the air that can cause a range of harmful attacks",
+                "Carbon Monoxide"=>"Highly toxic gas that is produced industrially",);
+                ksort($disc);
 
-                echo "<dt>Carbon Monoxide</dt>" ;
+                foreach($disc as $x => $x_value) {
+                echo "<dt>$x</dt>" ;
                 echo "<br>";
-                echo  "<dd>".$disc['Carbon Monoxide']."</dd>" ;
+                echo  "<dd>$x_value</dd>" ;
                 echo "<br>";
-
-                echo "<dt>Lead</dt>" ;
-                echo "<br>";
-                echo  "<dd>".$disc['Lead']."</dd>" ;
-                echo "<br>";
-
-                echo "<dt>Sulfur Dioxide</dt>" ;
-                echo "<br>";
-                echo  "<dd>".$disc['Sulfur Dioxide']."</dd>" ;
-                echo "<br>";
-
-                echo "<dt>Nitrogen Dioxide</dt>" ;
-                echo "<br>";
-                echo  "<dd>".$disc['Nitrogen Dioxide']."</dd>" ;
-                echo "<br>";
+                }
 
                 ?>
               
