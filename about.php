@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+
+<?php
+if(isset($_POST["first_sub"]))
+{
+    setcookie("name",$_POST["name"], time() + 86400, "/", "", 0);
+    setcookie("surname", $_POST["surname"], time() + 86400, "/", "", 0);
+    setcookie("age", $_POST["age"], time() + 86400, "/", "", 0);
+echo "Cookies Created !!";
+}
+
+if(isset($_POST["third_sub"]))
+{
+    setcookie("name","", time() - 86400, "/", "", 0);
+    setcookie("surname", "", time() - 86400, "/", "", 0);
+    setcookie("age", "", time() - 86400, "/", "", 0);
+} 
+?>
+
+
 <html lang="en">
 
 <head>
@@ -566,13 +585,53 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
     });
     </script>
 
-   
 
 </div>
 
 
   <!-- /Read files -->
 
+  <!-- /Cookie -->
+
+  <div class = "cookies" style = "background-color: rgb(194, 222, 235);">
+  <div class="addRemoveTxt">
+    <h2>COOKIES!</h2>
+  </div>
+        
+        <FORM method="POST" action="about.php">
+<div class = "input-name">
+        <input type ="text" name="name" placeholder = "Enter Name :"> <br/>
+        <input type ="text" name="surname" placeholder = "Enter Surname : "> <br/>
+        <input type ="text" name="age" placeholder = "Enter Age : "> <br/>
+        <br/>
+</div>
+<div class = "addRemoveButtons">
+        <input type = "submit" name = "first_sub" value = "Create Cookie">
+        <input type = "submit" name = "second_sub" value = "Retrive Cookie">
+        <input type = "submit" name = "third_sub" value = "Delete Cookie">
+</div>        
+        </FORM>
+
+        <?php
+        if(isset($_POST['second_sub']))
+        {
+        if(isset($_COOKIE["name"]))
+        {
+        echo "Name = ". $_COOKIE["name"]."<br/>";
+        echo "Surname = ". $_COOKIE["surname"]."<br/>";
+        echo "Age = ". $_COOKIE["age"]."<br/>";
+        }
+        else
+        {
+        echo "Cookies deleted !!";
+
+        }
+        }
+        ?>
+
+</div>
+
+ 
 
 
 
