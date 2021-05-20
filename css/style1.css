@@ -156,7 +156,9 @@ body {
     -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
+#about_sec .portal-text a{
+  text-decoration: none;
+}
 #about_sec .portal-text p {
     border: 0px solid #bcc0c3;
     background-color: #f7f5f5;
@@ -432,19 +434,19 @@ body {
 }
 /* ------------ Feature-Sec Finish ----------- */
 /*  Parallax */
- .parallax 
- {
-   background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat 100%;
-   background-origin: border-box;
-   opacity: 0.2;
-   margin-top: -80px;      
- }
- .parallax-inner
- {
-     padding-top: 10%;
- }
+.parallax 
+{
+  background: url(https://image.shutterstock.com/image-vector/large-number-mountains-vast-landscapes-260nw-1389573218.jpg) repeat 100%;
+  background-origin: border-box;
+  opacity: 0.2;
+  margin-top: -80px;      
+}
+.parallax-inner
+{
+  padding-top: 10%;
+}
 
- /*---------------------news ------------------*/
+/*---------------------news ------------------*/
 #news{
     min-height: 590px;
     width: 100%;
@@ -596,4 +598,3 @@ body {
   #sponsor #para{
     margin-left: 119px;
   }
- 
