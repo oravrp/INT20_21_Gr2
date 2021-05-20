@@ -17,6 +17,7 @@ if (isset($_GET['logout'])) {
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style>
 	.header {
@@ -30,6 +31,14 @@ if (isset($_GET['logout'])) {
 	}
 	form, .content {
 		width: 70%;
+	}
+	#searchUser {
+		border: 2px solid black;
+		border-radius: 5px;
+		height: 30px;
+	}
+	#searchUser:focus {
+		border-bottom-color: cornflowerblue;
 	}
 	</style>
 </head>
@@ -57,90 +66,70 @@ if (isset($_GET['logout'])) {
 
 		<!-- logged in user information -->
 		<div class="profile_info">
-			<div style="display: inline;">
+			<div>
 			<img src="../images/admin_profile.png">
-			<form method="POST" action="" style="margin-left: 200px; border-style: none;">
-			<input type="text" style="margin-left: 270px; margin-top: 0px;
-			width: 200px;" placeholder="Search for a user/admin" name="username">
-			<input type="submit" value="Search" style="width: 70px; margin-left: 10px;" name="search">
-			</form>
 			</div>
 			<div style="padding-top: 40px;">
 				<?php  if (isset($_SESSION['user'])) : ?>
-					<strong style="font-size: 25px; margin-top: 50px;"><?php echo $_SESSION['user']['username']; ?></strong>
+					<strong style="font-size: 25px; margin-top: 30px;"><?php echo $_SESSION['user']['username']; ?></strong>
 						<i  style="color: #888;">(<?php echo ucfirst($_SESSION['user']['user_type']); ?>)</i> 
 						<br>
 						<a href="home.php?logout='1'" style="color: red;">logout</a>
                         &nbsp; <a href="create_user.php"> + add user</a>
 					<br><br><br><br>
-					<?php 
-					if(isset($_POST['search'])) {
-					$request = mysqli_real_escape_string($db, $_POST['username']);
-					$query="SELECT id,username,email,user_type FROM users WHERE 
-					username like '%$request%';";
-					$result=mysqli_query($db,$query);
-					if(!$result){
-						die("Data cannot be fetched!" .mysqli_error($conn));
-					}
-					if(mysqli_num_rows($result)>0){
-						$numRows = mysqli_num_rows($result);
-						echo "<p>Result with username like : " .  $request;
-						echo "<h4>All users:</h4><br>";
-						echo "<table class='table'>";
-						echo "<tr> <thead>
-							<th scope='col'>ID</th>
-							<th scope='col'>Username</th>
-							<th scope='col'>Email</th>
-							<th scope='col'>User_type</th>
-							</thead>
-							</tr>";
-						while($row=mysqli_fetch_assoc($result)){
-							if($_SESSION['user']['username']!=$row['username']){
-							echo "<tr>
-								<td>".$row['id']."</td>
-								<td>".$row['username']."</td>
-								<td>".$row['email']."</td>
-								<td>".$row['user_type']."</td>
-								</tr>";
-							}
-						}
-						echo "</table>";
-					}else {
-						echo "<p>There are no results with username like  : ". $request;
-					}
-				}else {
-					$query="SELECT id,username,email,user_type FROM users;";
-					$result=mysqli_query($db,$query);
-					if(!$result){
-						die("Data cannot be fetched!" .mysqli_error($conn));
-					}
-					if(mysqli_num_rows($result)>0){
-						echo "<h4>All users:</h4><br>";
-						echo "<table class='table'>";
-						echo "<tr> <thead>
-							<th scope='col'>ID</th>
-							<th scope='col'>Username</th>
-							<th scope='col'>Email</th>
-							<th scope='col'>User_type</th>
-							</thead>
-							</tr>";
-						while($row=mysqli_fetch_assoc($result)){
-							if($_SESSION['user']['username']!=$row['username']){
-							echo "<tr>
-								<td>".$row['id']."</td>
-								<td>".$row['username']."</td>
-								<td>".$row['email']."</td>
-								<td>".$row['user_type']."</td>
-								</tr>";
-							}
-						}
-						echo "</table>";
-				}
-			}
-					?>
 				<?php endif ?>
+				<input type="text" id="searchUser" style="position: absolute; right: 400px; top: 250px;
+				width: 200px;"
+			 placeholder="Search for a user/admin" name="username">
 			</div>
 		</div>
+		<div style="margin-top: 0px;">
+		<h3 style="margin-left: 175px;" id="listUsers">List of  users/admins </h3>
+		<table style="margin-left: auto; margin-right: auto; text-align: center; margin-top: 50px;">
+		<thead>
+		<tr>
+		<th style="padding: 0px 20px 0px 20px;">Id</th>
+		<th style="padding: 0px 20px 0px 20px;">Username</th>
+		<th style="padding: 0px 20px 0px 20px;">Email</th>
+		<th style="padding: 0px 20px 0px 20px;">User-Type</th>
+		</tr>
+		</thead>
+		<tbody id="usersTable">
+		<?php 
+		include "showUsers.php";
+		?>
+		</tbody>
+		</table>
+		</div>
 	</div>
+	<script>
+	$(document).ready(function(){
+		$('#searchUser').keyup(function(){
+			//console.log($("#usersTable").html());
+            var text = $("#searchUser").val();
+            if( text != ""){
+				$('#usersTable').html(' ');
+           		 $.ajax({
+                type: "GET",
+                url: "searchUser.php",
+                data: 'txt=' + text,
+                success: function(data){
+                    $('#usersTable').append(data);
+                }
+            })
+            }else {
+				$('#usersTable').html(' ');
+				$.ajax({
+                type: "GET",
+                url: "showUsers.php",
+                data: 'txt=' + text,
+                success: function(data){
+                    $('#usersTable').append(data);
+                }
+			}
+				)
+		}
+	})
+});</script>	
 </body>
 </html>
