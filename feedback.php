@@ -156,7 +156,7 @@
         <nav>
             <ul class="nav__links">
                 <div class="dropdown">
-                    <li><a href="about.html">About</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <li><a href="about.php">About</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
                             <a href="staff.html">Our Staff</a>
                         </div></li>

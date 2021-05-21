@@ -10,6 +10,7 @@ if (isset($_POST['password']) || $_POST['reset_link_token'] || $_POST['email']) 
         mysqli_query($db, "UPDATE users set  password='" . $password . "', reset_link_token='" . NULL . "' ,exp_date='" . NULL . "' WHERE email='" . $emailId . "'")
        ){
         echo '<p>Congratulations! Your password has been updated successfully.</p>';
+        header('location: login.php');
        }
        else{
 

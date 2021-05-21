@@ -55,7 +55,7 @@ if(isset($_POST['password-reset']) && $_POST['email'])
  
     #$update = mysqli_query($db,"UPDATE users set  password='" . $password . "', reset_link_token='" . $token . "' ,exp_date='" . $expDate . "' WHERE email='" . $emailId . "'");
  
-    $link = "<a href='http://localhost:8080/PROJEKTI/multi_login/reset_test.php?key=".$emailId."&token=".$token."'>Click To Reset password</a>";
+    $link = "http://localhost:8080/INT20_21_Gr2/multi_login/reset_test.php?key=".$emailId."&token=".$token." Click To Reset password";
    $update = mysqli_query($db,"UPDATE users
           SET 
           reset_link_token=' $token ' , exp_date='$expDate'
