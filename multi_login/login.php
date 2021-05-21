@@ -68,7 +68,7 @@
 						<input type="password" name="password" placeholder="Password">
 					<!-- </div> -->
 					<!-- <div class="input-group"> -->
-						<a href="#">Forgot your password?</a>
+						<a href="forgot_test.php">Forgot your password?</a>
 						<button type="submit" class="btn" name="login_btn">Login</button>
 					<!-- </div> -->
 					<br><br>
