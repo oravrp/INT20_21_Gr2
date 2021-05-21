@@ -152,9 +152,12 @@ if(isset($_POST["third_sub"]))
             <i class="fa fa-code" aria-hidden="true"></i>
                 <h2>Second concept</h2>
                 
-                <h3> Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Placeat sunt perspiciatis facilis nulla nam ipsa unde magnam, accusantium quidem id numquam iste ducimus deserunt. 
-                    Odio pariatur voluptatum expedita aut aperiam. </h3>
+                <?php
+                $string = str_replace("Lorem" , "Lumus" , "Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Placeat sunt perspiciatis facilis nulla nam ipsa unde magnam, accusantium quidem id numquam iste ducimus deserunt. 
+                Odio pariatur voluptatum expedita aut aperiam.");
+                echo "<h3>". $string ."</h3>";
+                ?>
          
         </div>
 

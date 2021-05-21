@@ -7,7 +7,8 @@ $filename = "about.txt";
    echo $content;
 
    } else{
-   echo "ERROR: File does not exist.";
+      echo substr("ERROR: File does not exist.", 0, 6);  
+      echo substr("ERROR: File does not exist.",6);
    }
 
 
