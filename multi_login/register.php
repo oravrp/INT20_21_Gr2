@@ -64,7 +64,7 @@
 				<!-- </div> -->
 				<!-- <div class="input-group"> -->
 					<!-- <label>Email</label> -->
-					<input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email" autofocus pattern="[^ @]*@[^ @]*">
+					<input type="email" name="email" value="<?php echo $email; ?>" placeholder="Email" pattern="[^ @]*@[^ @]*">
 				<!-- </div> -->
 				<!-- <div class="input-group"> -->
 					<!-- <label>Password</label> -->
