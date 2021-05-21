@@ -3,39 +3,37 @@
 <head>
 <title>Paswword reset</title>
 <style>
-    body{
-        background-color: whitesmoke;
-        
-    }
-    input{
-        width:250px;
-        border: 1px;
-        border-radius: 05px;
-        padding: 8px 15px 8px 15px;
-        margin: 15px 0px 15px 0px;
-    }
 
-    #bd{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 250px 50px 20px;
-    }
+body{
+    background-color: whitesmoke;  
+}
+input{
+    width:250px;
+    border: 1px;
+    border-radius: 05px;
+    padding: 8px 15px 8px 15px;
+    margin: 15px 0px 15px 0px;
+}
+#bd{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 50px 20px;
+}
+#box{
+    background: light-blue;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:520px;
+    height:350px;
+}
 
-    #box{
-        background: light-blue;
-        border-radius: 10px;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width:500px;
-        height:350px;
-    }
-
-    input[type=submit] {
+input[type=submit] {
     width: 50%;
     background-color: #4995A3;
     color: white; 
@@ -47,9 +45,9 @@
 }
 
 input[type=submit]:hover {
-  background-color: #10637b;
+    background-color: #10637b;
 }
-   
+
 h1 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: bold;
@@ -67,8 +65,28 @@ h1 {
 	text-align: center;
 }
 
+.message{
+    width: 500px; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #00cc00; 
+	color: #00cc00; 
+	background: #e6ffe6; 
+	border-radius: 5px; 
+	text-align: center;
+}
 
-    
+.msg1 {
+	width: 500px; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -85,80 +103,80 @@ h1 {
 </div>
 </body>
 </html>
-
 <?php include('functions.php');
- 
-// connect to database
 $db = mysqli_connect('localhost', 'root', '', 'multi_login');
 
-$errors   = array(); 
+$errors   = array();
+$db_password ="";
 
-if (isset($_POST['reset_btn'])) {
+if (isset($_POST['reset_btn'])) { 
 
-    
     $_email = $_POST['email'];
     $currentPassword = $_POST['current_password'];
     $newPassword = $_POST['new_password'];
-
     if (empty($_email)) { 
 		array_push($errors, "Email is required"); 
 	}
     else{
-        $query = "SELECT * FROM users WHERE email='$_email'";
-        $result = mysqli_query($db, $query);
-        $row = mysqli_fetch_assoc($result);
-        $db_password = $row['password'];
+        $query1 = "SELECT email FROM users WHERE email='$_email'";
+        $result1 = $db->query($query1);
+        if ($result1->num_rows == 0){
+            array_push($errors, "Email entered was not correct");
+        }
+        else{
+            $query = "SELECT * FROM users WHERE email='$_email'";
+            $result = mysqli_query($db, $query);
+            $row = mysqli_fetch_assoc($result);
+            $db_password = $row['password'];
+        
+    
+            if (empty($currentPassword)) { 
+                array_push($errors, "Password is required"); 
+            }else{
+                $currentPassword = md5($currentPassword);
+                if($db_password != $currentPassword){
+                    array_push($errors,"Your current password entrie was not correct.");
+                }
+            }
+            if (empty($newPassword)) { 
+                array_push($errors, "Password is required");
+            }elseif(!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $newPassword)){
+                array_push($errors,"Password must be 8-20 characters long,Uppercase letter,number and a special symbol.");
+            }
+        }
     }
 
-    if (empty($currentPassword)) { 
-		array_push($errors, "Password is required"); 
-    }
-
-    if (empty($newPassword)) { 
-		array_push($errors, "Password is required");
-
-	}elseif(!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $newPassword)){
-        array_push($errors,"Password must be 8-20 characters long,Uppercase letter,number and a special symbol.");
-	}
-
-        $currentPassword = md5($currentPassword);
         $newPassword = md5($newPassword);
 
-        if (count($errors) == 0){
 
-    if($db_password == $currentPassword){
+     if (count($errors) == 0){
 
         $edit = mysqli_query($db,"update users set password='$newPassword' where email='$_email'");
 
             if($edit)
             {
                 mysqli_close($db);
-
-                echo '<script type="text/javascript"> alert("Youre Password has been changed") </script>';
-                
+                $msg = "Your password has been changed";
+                echo '<div class="message">';
+				echo $msg;
+		        echo '</div>';
                 exit;
             }
-
             else
             {
-                echo '<script type="text/javascript"> alert("Youre Password couldnt be changed") </script>';
+                $msg1 = "Your password couldnt be changed";
+                echo '<div class="errormessage">';
+				echo $msg1;
+		        echo '</div>';
             }    	
-     }
-
-     else{
-
-        echo '<script type="text/javascript"> alert("Youre current password entrie does not match the password in our database, try again") </script>';
-        }
-    }
-
-    else{
-        echo '<div class="error">';
-			foreach ($errors as $error){
-				echo $error .'<br>';
-			}
-		echo '</div>';
+         }
+    
+        else{
+            echo '<div class="error">';
+                foreach ($errors as $error){
+                    echo $error .'<br>';
+                }
+            echo '</div>';
     }
 }
-
-
 ?>
