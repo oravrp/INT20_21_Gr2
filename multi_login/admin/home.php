@@ -77,6 +77,7 @@ if (isset($_GET['logout'])) {
 						<a href="home.php?logout='1'" style="color: red;">logout</a>
                         &nbsp; <a href="create_user.php"> + add user</a>
 						<a href="delete_user.php"> - delete user </a>
+						<a href="../reset.php"> - change password </a>
 					<br><br><br><br>
 				<?php endif ?>
 				<input type="text" id="searchUser" style="position: absolute; right: 400px; top: 250px;

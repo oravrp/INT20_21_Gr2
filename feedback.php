@@ -164,9 +164,9 @@
                 <div class="dropdown">
                     <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
-                            <a href="outputs.html">Output1</a>
+                            <a href="outputs.php">Output1</a>
                             <a href="pacman.html">Game</a>
-                            <a href="Login.html">Login/SignUp</a>
+                            <a href="multi_login/login.php">Login/SignUp</a>
                         </div>
                     </li>
                 </div>

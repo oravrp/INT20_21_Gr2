@@ -59,9 +59,9 @@ if(isset($_POST["third_sub"]))
                 <div class="dropdown">
                     <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
-                            <a href="outputs.html">Output 1</a>
+                            <a href="outputs.php">Output 1</a>
                             <a href="pacman.html">Game</a>
-                            <a href="Login.html">Login/SignUp</a>
+                            <a href="multi_login/login.php">Login/SignUp</a>
                         </div>
                     </li>
                 </div>
@@ -77,7 +77,7 @@ if(isset($_POST["third_sub"]))
                 <li><a href="newsnevents.html">News & Events</a></li>
             </ul>
         </nav>
-        <a class="cta" href="contact.html">Contact</a>
+        <a class="cta" href="contact.php">Contact</a>
         <p class="menu cta"><a href="home.html">Home</a></p>
     </header>
 
