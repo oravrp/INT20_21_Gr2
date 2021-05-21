@@ -1,6 +1,6 @@
 <?php 
 //include "../functions.php";
-$db = mysqli_connect('localhost', 'root', 'qqwwee123.?', 'multi_login');
+$db = mysqli_connect('localhost', 'root', '', 'multi_login');
 $query="SELECT id,username,email,user_type FROM users;";
     $result=mysqli_query($db,$query);
     if(!$result){

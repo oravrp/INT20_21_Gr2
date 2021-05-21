@@ -16,6 +16,8 @@ if(isset($_POST['submit'])) {
     $subject = 'New Message from Contact Page';
     $message = $_POST['message'];
 }
+if(filter_var($emailFrom, FILTER_VALIDATE_EMAIL)) {
+
 $emailTo = 'helpairsense@gmail.com';
 $body = ' You have recieved a new email from : '. $name . "\n". ' Email :  ' . 
 $emailFrom . "\n\n". ' Message : ' .$message ;
@@ -45,7 +47,6 @@ if(mail($emailTo, $subject, $body)) {
 else {
      echo "<h4 style = 'text-align: center'>Email sending failed :(. Please try again <br></h4>";
  }
-
 //----------------------------------Secure Contact inputs from SQL Injection ---------------------------------
 if(isset($_POST['submit'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -61,4 +62,10 @@ if(isset($_POST['submit'])) {
         mysqli_stmt_bind_param($statement, "sss", $name, $emailFrom, $subject);
         mysqli_stmt_execute($statement);
     }
+}
+else {
+    
+        echo "<h4 style = 'text-align: center'>Your email was not valid :(. Please try again <br></h4>";
+
+}
 ?>
