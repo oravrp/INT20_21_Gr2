@@ -3,43 +3,43 @@
 const menu = [{
         id: "1",
         img: "/img/StaffPhoto.png",
-        text: "<abbr title='Chief Executive Officer'>CEO</abbr>",
-        header: "Ora Vrapcani",
+        text: "<abbr>Proffesor </abbr>",
+        header: "Dr. Lule Ahmedi",
         contact: "twitter",
     },
     {
         id: "2",
         img: "/img/StaffPhoto.png",
-        text: "<abbr title='Chief Technology Officer'>CTO</abbr>",
-        header: "Loreta Pajaziti",
+        text: "<abbr> Teaching Assistant </abbr>",
+        header: "M.Sc. Dardan Shabani",
         contact: "twitter",
     },
     {
         id: "2",
         img: "/img/StaffPhoto.png",
-        text: "<abbr title='Chief Technology Officer'>CTO</abbr>",
+        text: "<abbr>Student</abbr>",
         header: "Lind Krasniqi",
         contact: "twitter",
     },
     {
         id: "2",
         img: "/img/StaffPhoto.png",
-        text: "<abbr title='Chief Technology Officer'>CTO</abbr>",
+        text: "<abbr>Student</abbr>",
+        header: "Loreta Pajaziti",
+        contact: "twitter",
+    },
+    {
+        id: "3",
+        img: "/img/StaffPhoto.png",
+        text: "<abbr>Student</abbr>",
         header: "Lum Dukaj",
         contact: "twitter",
     },
     {
         id: "3",
         img: "/img/StaffPhoto.png",
-        text: "<abbr title='Chief Operating Officer'>COO</abbr>",
-        header: "Florian Halimi",
-        contact: "twitter",
-    },
-    {
-        id: "3",
-        img: "/img/StaffPhoto.png",
-        text: "<abbr title='Chief Operating Officer'>COO</abbr>",
-        header: "Flamur Mustafa",
+        text: "<abbr>Student</abbr>",
+        header: "Ora Vrapcani",
         contact: "twitter",
     },
 
@@ -58,7 +58,7 @@ function displayMenuItems(item) {
     <img src="./${menuItem.img}" alt="Staff image">
     <h1>${menuItem.header}</h1>
     <p>${menuItem.text}</p>
-    <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i>${menuItem.contact}</a>
+    
 </div>`;
 
     });

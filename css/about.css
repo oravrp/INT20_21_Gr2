@@ -429,6 +429,7 @@ transform:translateY(-5px);
     height:100%;
     width: 50%;
    
+   
   }
   
   #text-one{
@@ -490,7 +491,7 @@ transform:translateY(-5px);
   .map{
     text-align: center;
     position:relative;
-    top: 300px;
+    top: 150px;
   }
 
   .map p{
@@ -499,6 +500,9 @@ transform:translateY(-5px);
     font-weight: bold;
   }
 
+  #last_para{
+    padding-bottom: 70px;
+  }
 
   /*---------- 6. VIDEO SLIDER ---------- */
 

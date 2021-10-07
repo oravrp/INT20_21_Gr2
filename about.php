@@ -57,24 +57,24 @@ if(isset($_POST["third_sub"]))
                     </div></li>
                 </div>
                 <div class="dropdown">
-                    <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="dropdown-content">
+                    <li><a href="multi_login/login.php">Log in</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <!-- <div class="dropdown-content">
                             <a href="outputs.php">Output 1</a>
                             <a href="pacman.html">Game</a>
                             <a href="multi_login/login.php">Login/SignUp</a>
-                        </div>
+                        </div> -->
                     </li>
                 </div>
                 <div class="dropdown">
-                    <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <!-- <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
                             <a href="case.html">Kosovo Case</a>
                             <a href="feedback.php">feedback</a>
                             <a href="flag.html">Svg</a>
                         </div>
-                    </li>
+                    </li> -->
                 </div>
-                <li><a href="newsnevents.html">News & Events</a></li>
+                <!-- <li><a href="newsnevents.html">News & Events</a></li> -->
             </ul>
         </nav>
         <a class="cta" href="contact.php">Contact</a>
@@ -286,36 +286,36 @@ if(isset($_POST["third_sub"]))
                     <p id="country">IRELAND<span class = "date"> since 2010 </span></p>
                     <p id="university">TYNDALL NATIONAL INSITUTE  <p> 
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
-                    <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Ireland"> 
+                    <!-- <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Ireland"> 
                         <source src="audio/Ireland.ogg.mp3" type="audio/ogg" >
-                    </audio>
+                    </audio> -->
                 </div>
 
                 <div class = "second_partner">
                     <p id="country">SWEDEN<span class = "date"> since 2012</span> </p>
                     <p id="university">LINNEUNIVERSITETET</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
-                    <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Sweden"> 
+                    <!-- <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Sweden"> 
                         <source src="audio/Sweden.ogg.mp3" type="audio/ogg" >
-                    </audio>
+                    </audio> -->
                 </div>
 
                 <div class = "third_partner">
                     <p id="country">GERMANY<span class = "date"> since 2008</span>
                         <p id="university">UNIVERSITÄT DUISBURG - ESSEN</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
-                    <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Germany"> 
+                    <!-- <audio controls style=" position: relative; left:15%;" title="Click here to listen to the national anthem of Germany"> 
                         <source src="audio/Germany.ogg.mp3" type="audio/ogg" >
-                    </audio>
+                    </audio> -->
                 </div>
 
-                <div class = "fourth_partner">
+                <div class = "fourth_partner"  >
                     <p id="country">AUSTRIA<span class = "date"> since 2008</span> </p>
                     <p id="university">TU WIEN</p>
-                    <p id = "last_para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
-                    <audio controls style=" position: relative; left:15%; margin-bottom: 100px;" title="Click here to listen to the national anthem of Austria"> 
+                    <p id = "last_para" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nesciunt corporis velit?</p>
+                    <!-- <audio controls style=" position: relative; left:15%; margin-bottom: 100px;" title="Click here to listen to the national anthem of Austria"> 
                         <source src="audio/Austria.ogg.mp3" type="audio/ogg" >
-                    </audio>
+                    </audio> -->
                 </div>
 
          </div>
@@ -498,7 +498,7 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
 <!-- /Canvas Image-->
 
 <!-- Ideas -->
-<script>
+<!-- <script>
     $(document).ready(function() {
        var html = '<br><textarea type="text" id="inputAdd">'
        $(".AddMoreElements").click(function() {
@@ -553,23 +553,23 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
 
   <?php
 
-        if (isset($_POST['submit'])){
-            $message = $_POST['idea'];
-            $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-            fwrite($myfile, $message);
-            fclose($myfile);
-        }
+        // if (isset($_POST['submit'])){
+        //     $message = $_POST['idea'];
+        //     $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        //     fwrite($myfile, $message);
+        //     fclose($myfile);
+        // }
 
 ?>
 
 
 </div>
-</form>
+</form> -->
   <!-- /Ideas -->
 
   <!-- /Read files -->
 
-<div class = "read-file" style="background-color: rgb(248, 248, 248); padding-top: 5px; padding-bottom: 10px;">
+<!-- <div class = "read-file" style="background-color: rgb(248, 248, 248); padding-top: 5px; padding-bottom: 10px;">
 
     <button data-poll-id="5" type="button" class = "button" id="bt" name = "bt" style = "margin-left: auto; margin-bottom: 5px; margin-top: 10px;">Click to learn more about Airsense</button>
     <p></p>
@@ -589,13 +589,13 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
     </script>
 
 
-</div>
+</div> -->
 
 
   <!-- /Read files -->
 
   <!-- /Cookie -->
-
+<!-- 
   <div class = "cookies" style = "background-color: rgb(194, 222, 235);">
   <div class="addRemoveTxt">
     <h2>COOKIES!</h2>
@@ -616,23 +616,23 @@ border-image: url(img/logo_airsense.png) 0 0 161 0 repeat repeat;">
         </FORM>
 
         <?php
-        if(isset($_POST['second_sub']))
-        {
-        if(isset($_COOKIE["name"]))
-        {
-        echo "Name = ". $_COOKIE["name"]."<br/>";
-        echo "Surname = ". $_COOKIE["surname"]."<br/>";
-        echo "Age = ". $_COOKIE["age"]."<br/>";
-        }
-        else
-        {
-        echo "Cookies deleted !!";
+        // if(isset($_POST['second_sub']))
+        // {
+        // if(isset($_COOKIE["name"]))
+        // {
+        // echo "Name = ". $_COOKIE["name"]."<br/>";
+        // echo "Surname = ". $_COOKIE["surname"]."<br/>";
+        // echo "Age = ". $_COOKIE["age"]."<br/>";
+        // }
+        // else
+        // {
+        // echo "Cookies deleted !!";
 
-        }
-        }
+        // }
+        // }
         ?>
 
-</div>
+</div> -->
 
  
 

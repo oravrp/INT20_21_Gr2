@@ -37,15 +37,15 @@
                     </div></li>
                 </div>
                 <div class="dropdown">
-                    <li><a href="#">Outputs</a><i class="fa fa-angle-down" aria-hidden="true"></i>
-                        <div class="dropdown-content">
+                    <li><a href="multi_login/login.php">Log in</a><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <!-- <div class="dropdown-content">
                             <a href="outputs.php">Output 1</a>
                             <a href="pacman.html">Game</a>
                             <a href="multi_login/login.php">Login/SignUp</a>
-                        </div>
+                        </div> -->
                     </li>
                 </div>
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                     <li><a href="#">Case Studies</a><i class="fa fa-angle-down" aria-hidden="true"></i>
                         <div class="dropdown-content">
                             <a href="case.html">Kosovo Case</a>
@@ -53,8 +53,8 @@
                             <a href="flag.html">Svg</a>
                         </div>
                     </li>
-                </div>
-                <li><a href="newsnevents.html">News & Events</a></li>
+                </div> -->
+                <!-- <li><a href="newsnevents.html">News & Events</a></li> -->
             </ul>
         </nav>
         <a class="cta" href="contact.php">Contact</a>
